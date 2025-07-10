@@ -1,0 +1,38 @@
+-----------------------------------------------------------------------------------
+Prisma Schema – Convenciones del Proyecto y Guías de Diseño
+-----------------------------------------------------------------------------------
+
+Este archivo define el esquema de base de datos utilizando Prisma ORM. A continuación
+se detallan las convenciones y patrones aplicados en todo el esquema. Cualquier 
+colaborador que trabaje sobre este código debe estar familiarizado con los siguientes puntos:
+
+// 1. Tipos escalares
+//    - Los tipos básicos utilizados son: String, Int, Float, Boolean, DateTime.
+//    - También se utilizan enums personalizados (por ejemplo, `Rol`) para representar
+//      conjuntos limitados de valores.
+
+// 2. Relaciones entre modelos
+//    - Uno a Uno: Se define utilizando un campo con signo de interrogación (`?`) indicando 
+//      opcionalidad, junto con la directiva `@relation(fields: [...], references: [...])`.
+//    - Uno a Muchos: El lado "muchos" se representa como un array (por ejemplo, `Venta[]`).
+//    - Muchos a Muchos: Se implementa de forma explícita mediante tablas intermedias 
+//      (por ejemplo, `JuegoXUsuario`, `CategoriaXJuego`). No se utilizan relaciones implícitas.
+
+// 3. Anotaciones y directivas comunes
+//    - `@id`: Indica la clave primaria del modelo.
+//    - `@default(...)`: Define un valor por defecto (por ejemplo, `autoincrement()`, `now()`, `false`).
+//    - `@unique`: Impone una restricción de unicidad sobre el campo.
+//    - `?`: El campo es opcional (acepta valores nulos).
+//    - `[]`: Indica una lista (usado para representar arrays o relaciones múltiples).
+//    - `@db.VarChar(n)`: Establece una longitud máxima en caracteres para el campo en PostgreSQL.
+
+// 4. Buenas prácticas aplicadas
+//    - Se crean modelos explícitos para relaciones muchos a muchos.
+//    - Se establecen límites de caracteres (`VarChar`) en campos de texto sensibles.
+//    - Se mantiene una separación clara entre entidades del negocio (Usuarios, Juegos, Noticias, etc.).
+//    - Los modelos se nombran en singular siguiendo la convención de Prisma.
+
+// Para más información sobre la sintaxis del esquema de Prisma:
+// https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference
+//
+
