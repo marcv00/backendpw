@@ -2,9 +2,9 @@ import express, { Request, Response } from "express"
 import dotenv from "dotenv"
 import bodyParser from "body-parser"
 import cors from "cors"
-import TodosController from "./controllers/TodosController"
-import UsuariosController from "./controllers/UsuariosController"
-import CategoriasController from "./controllers/CategoriasController"
+// import TodosController from "./controllers/TodosController"
+// import UsuariosController from "./controllers/UsuariosController"
+// import CategoriasController from "./controllers/CategoriasController"
 
 dotenv.config()
 const app = express()
@@ -32,9 +32,9 @@ app.get("/", (req : Request, resp : Response) => {
 })
 
 // Configuracion entidad Todo
-app.use("/todos", TodosController())
-app.use("/usuarios", UsuariosController())
-app.use("/categorias", CategoriasController())
+// app.use("/todos", TodosController())
+// app.use("/usuarios", UsuariosController())
+// app.use("/categorias", CategoriasController())
 
 
 
