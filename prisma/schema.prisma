@@ -28,8 +28,9 @@ model Usuario {
   nombre     String @db.VarChar(50)
   apellido   String @db.VarChar(50)
 
-  ventas Venta[] // Relación uno a muchos: un usuario puede tener muchas ventas
-  juegos JuegoXUsuario[] // Relación muchos a muchos con juegos
+  ventas  Venta[] // Relación uno a muchos: un usuario puede tener muchas ventas
+  juegos  JuegoXUsuario[] // Relación muchos a muchos con juegos
+  resenas Resena[] // Reseñas hechas por el usuario
 }
 
 model Juego {
@@ -49,11 +50,12 @@ model Juego {
   claves      Clave[] // Relación uno a muchos: un juego tiene muchas claves
   ventas      JuegoXVenta[] // Relación muchos a muchos con ventas
   usuarios    JuegoXUsuario[] // Relación muchos a muchos con usuarios
+  resenas     Resena[] // Reseñas recibidas por el juego
 }
 
 model Noticia {
   id            Int      @id @default(autoincrement())
-  titulo        String   @db.VarChar(120)
+  titulo        String   @unique @db.VarChar(120)
   tiempoLectura Int
   fechaPub      DateTime
   texto         String
@@ -77,14 +79,15 @@ model Foto {
 
 model Categoria {
   id     Int    @id @default(autoincrement())
-  nombre String @db.VarChar(50)
+  nombre String @unique @db.VarChar(50)
 
   juegos CategoriaXJuego[] // Relación muchos a muchos con juegos
 }
 
 model Plataforma {
   id     Int    @id @default(autoincrement())
-  nombre String @db.VarChar(50)
+  nombre String @unique @db.VarChar(50)
+  color  String @db.VarChar(20) // Color para la plataforma (puede ser un código hexadecimal)
 
   juegos PlataformaXJuego[] // Relación muchos a muchos con juegos
 }
@@ -162,4 +165,17 @@ model CatNoticiaXNoticia {
 
   noticia    Noticia    @relation(fields: [noticiaId], references: [id])
   catNoticia CatNoticia @relation(fields: [catNoticiaId], references: [id])
+}
+
+model Resena {
+  id            Int      @id @default(autoincrement())
+  usuarioId     Int // FK al usuario que hizo la reseña
+  juegoId       Int // FK al juego al que pertenece la reseña
+  fechaCreacion DateTime @default(now()) // Fecha de creación de la reseña
+  texto         String   @db.VarChar(1000) // Contenido de la reseña
+  puntuacion    Float // Valor de 1.0 a 5.0 (permite medias estrellas)
+
+  // Relaciones
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  juego   Juego   @relation(fields: [juegoId], references: [id])
 }
