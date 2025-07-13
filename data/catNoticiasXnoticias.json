@@ -1,0 +1,62 @@
+[
+  {
+    "noticiaTitulo": "GTA 6 conecta con el universo de GTA 5",
+    "categorias": ["Lanzamientos", "Opinion"]
+  },
+  {
+    "noticiaTitulo": "Summer Game Fest 2025: fechas y eventos destacados",
+    "categorias": ["Eventos", "Lanzamientos"]
+  },
+  {
+    "noticiaTitulo": "Clair Obscur: Expedition 33, una obra de arte en forma de videojuego",
+    "categorias": ["Review", "Entrevistas"]
+  },
+  {
+    "noticiaTitulo": "Personajes exclusivos diseñados por Toriyama para el primer videojuego de Dragon Ball",
+    "categorias": ["Opinion", "Actualizaciones"]
+  },
+  {
+    "noticiaTitulo": "Marvel 1943: Rise of Hydra, una alianza inesperada en la Segunda Guerra Mundial",
+    "categorias": ["Lanzamientos", "Review"]
+  },
+  {
+    "noticiaTitulo": "El regreso de la saga Silent Hill",
+    "categorias": ["Lanzamientos", "Actualizaciones"]
+  },
+  {
+    "noticiaTitulo": "El futuro de la saga Final Fantasy",
+    "categorias": ["Actualizaciones", "Opinion"]
+  },
+  {
+    "noticiaTitulo": "Death Stranding 2: On the Beach",
+    "categorias": ["Lanzamientos", "Review"]
+  },
+  {
+    "noticiaTitulo": "El impacto de la inteligencia artificial en los videojuegos",
+    "categorias": ["Opinion"]
+  },
+  {
+    "noticiaTitulo": "La evolución de los eSports",
+    "categorias": ["Eventos", "Opinion"]
+  },
+  {
+    "noticiaTitulo": "La realidad virtual y aumentada en los videojuegos",
+    "categorias": ["Actualizaciones", "Opinion"]
+  },
+  {
+    "noticiaTitulo": "El futuro de los videojuegos indie",
+    "categorias": ["Opinion", "Review"]
+  },
+  {
+    "noticiaTitulo": "The Legend of Zelda: Tears of the Kingdom",
+    "categorias": ["Review", "Lanzamientos"]
+  },
+  {
+    "noticiaTitulo": "GTA 7: Rumores y expectativas",
+    "categorias": ["Opinion"]
+  },
+  {
+    "noticiaTitulo": "Half-Life 3: ¿Finalmente en desarrollo?",
+    "categorias": ["Opinion", "Actualizaciones"]
+  }
+]

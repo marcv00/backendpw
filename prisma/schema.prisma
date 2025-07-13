@@ -35,7 +35,7 @@ model Usuario {
 
 model Juego {
   id               Int      @id @default(autoincrement())
-  titulo           String   @db.VarChar(200)
+  titulo           String   @unique @db.VarChar(200)
   descripcion      String
   precio           Float
   porcentajeOferta Float? // Campo opcional (puede ser null)
@@ -153,7 +153,7 @@ model PlataformaXJuego {
 
 model CatNoticia {
   id     Int    @id @default(autoincrement())
-  nombre String @db.VarChar(50)
+  nombre String @unique @db.VarChar(50)
 
   noticias CatNoticiaXNoticia[] // Relación muchos a muchos con noticias
 }

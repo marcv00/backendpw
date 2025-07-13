@@ -1,0 +1,14 @@
+[
+  { "nombre": "Aventura" },
+  { "nombre": "Acción" },
+  { "nombre": "Estrategia" },
+  { "nombre": "RPG" },
+  { "nombre": "Simulación" },
+  { "nombre": "Deportes" },
+  { "nombre": "Terror" },
+  { "nombre": "Indie" },
+  { "nombre": "Puzzle" },
+  { "nombre": "Shooter" },
+  { "nombre": "Supervivencia" },
+  { "nombre": "Multijugador" }
+]

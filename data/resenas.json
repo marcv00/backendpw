@@ -1,0 +1,79 @@
+[
+  {
+    "usuarioCorreo": "juanp@juegosxd.com",
+    "juegoTitulo": "Cyberpunk 2077",
+    "puntuacion": 4.0,
+    "texto": "No puedo creer que esté diciendo esto, pero... ¡ahora sí vale la pena jugarlo!",
+    "fechaCreacion": "2025-05-30T15:24:00.000Z"
+  },
+  {
+    "usuarioCorreo": "juanp@juegosxd.com",
+    "juegoTitulo": "Minecraft",
+    "puntuacion": 4.8,
+    "texto": "Literalmente mi terapia. Hacer casitas y minar diamantes nunca falla 🧱💎",
+    "fechaCreacion": "2025-06-18T10:42:00.000Z"
+  },
+  {
+    "usuarioCorreo": "luciap@juegosxd.com",
+    "juegoTitulo": "The Witcher 3: Wild Hunt",
+    "puntuacion": 5.0,
+    "texto": "Mis estándares para los RPGs quedaron arruinados después de este juego. Una obra maestra 🎯",
+    "fechaCreacion": "2025-07-01T09:00:00.000Z"
+  },
+  {
+    "usuarioCorreo": "pedror@juegosxd.com",
+    "juegoTitulo": "League of Legends",
+    "puntuacion": 2.5,
+    "texto": "Toxicidad 24/7 y aún así aquí sigo. Qué enfermo estoy 😩",
+    "fechaCreacion": "2025-06-02T13:20:00.000Z"
+  },
+  {
+    "usuarioCorreo": "pedror@juegosxd.com",
+    "juegoTitulo": "Valorant",
+    "puntuacion": 4.3,
+    "texto": "Nada como pegar un headshot en pistol round y gritar 'LET'S GOOO' 🎯🔫",
+    "fechaCreacion": "2025-06-10T16:45:00.000Z"
+  },
+  {
+    "usuarioCorreo": "mariac@juegosxd.com",
+    "juegoTitulo": "God of War (2018)",
+    "puntuacion": 4.9,
+    "texto": "Lo empecé por curiosidad y terminé llorando con Kratos. Increíble historia y gameplay 😭⚔️",
+    "fechaCreacion": "2025-05-25T12:00:00.000Z"
+  },
+  {
+    "usuarioCorreo": "manuelm@juegosxd.com",
+    "juegoTitulo": "Rust",
+    "puntuacion": 3.7,
+    "texto": "Rust es como una relación tóxica. Me rompe, pero sigo ahí.",
+    "fechaCreacion": "2025-07-06T11:30:00.000Z"
+  },
+  {
+    "usuarioCorreo": "camilar@juegosxd.com",
+    "juegoTitulo": "Among Us",
+    "puntuacion": 4.6,
+    "texto": "No confíen en mí si me río demasiado en la llamada 👀🔪",
+    "fechaCreacion": "2025-06-28T17:15:00.000Z"
+  },
+  {
+    "usuarioCorreo": "luciap@juegosxd.com",
+    "juegoTitulo": "Overwatch 2",
+    "puntuacion": 3.8,
+    "texto": "La mecánica está buena pero extraño los vibes del primero 💔",
+    "fechaCreacion": "2025-05-20T18:10:00.000Z"
+  },
+  {
+    "usuarioCorreo": "juanp@juegosxd.com",
+    "juegoTitulo": "Red Dead Redemption 2",
+    "puntuacion": 5.0,
+    "texto": "Arthur Morgan merece un Oscar. Punto.",
+    "fechaCreacion": "2025-06-04T11:25:00.000Z"
+  },
+  {
+    "usuarioCorreo": "pedror@juegosxd.com",
+    "juegoTitulo": "Fortnite",
+    "puntuacion": 4.2,
+    "texto": "No soy bueno construyendo pero bailo sabroso después de cada kill 😂🕺",
+    "fechaCreacion": "2025-07-03T20:05:00.000Z"
+  }
+]

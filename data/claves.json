@@ -1,0 +1,68 @@
+[
+  {
+    "correoUsuario": "juanp@juegosxd.com",
+    "juegoTitulo": "Cyberpunk 2077",
+    "texto": "MXLMW-FIOIC-YCFCN",
+    "usada": true
+  },
+  {
+    "correoUsuario": "juanp@juegosxd.com",
+    "juegoTitulo": "Minecraft",
+    "texto": "FI9CL-HKH0K-LOTWZ",
+    "usada": true
+  },
+  {
+    "correoUsuario": "juanp@juegosxd.com",
+    "juegoTitulo": "Red Dead Redemption 2",
+    "texto": "D3ARX-46CBH-00ZS2",
+    "usada": true
+  },
+  {
+    "correoUsuario": "luciap@juegosxd.com",
+    "juegoTitulo": "The Witcher 3: Wild Hunt",
+    "texto": "ZKW0B-JT942-TNPJI",
+    "usada": true
+  },
+  {
+    "correoUsuario": "luciap@juegosxd.com",
+    "juegoTitulo": "Overwatch 2",
+    "texto": "4WZR3-3ATFF-903S6",
+    "usada": true
+  },
+  {
+    "correoUsuario": "pedror@juegosxd.com",
+    "juegoTitulo": "League of Legends",
+    "texto": "BI3TY-SAK49-XN7JA",
+    "usada": true
+  },
+  {
+    "correoUsuario": "pedror@juegosxd.com",
+    "juegoTitulo": "Valorant",
+    "texto": "ISSUV-0BBWW-4CB5Q",
+    "usada": true
+  },
+  {
+    "correoUsuario": "pedror@juegosxd.com",
+    "juegoTitulo": "Fortnite",
+    "texto": "VMSS8-CEFR6-4BV4K",
+    "usada": true
+  },
+  {
+    "correoUsuario": "mariac@juegosxd.com",
+    "juegoTitulo": "God of War (2018)",
+    "texto": "O2NAM-WVID6-5ANQD",
+    "usada": true
+  },
+  {
+    "correoUsuario": "manuelm@juegosxd.com",
+    "juegoTitulo": "Rust",
+    "texto": "O1QN3-RO8LI-0X8Z8",
+    "usada": true
+  },
+  {
+    "correoUsuario": "camilar@juegosxd.com",
+    "juegoTitulo": "Among Us",
+    "texto": "MZUPK-QWF2G-U7LTT",
+    "usada": true
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "correo": "admin@juegosxd.com",
+    "contrasena": "admin123",
+    "rol": "ADMIN",
+    "nombre": "Admin",
+    "apellido": "Master"
+  },
+  {
+    "correo": "admin2@juegosxd.com",
+    "contrasena": "admin234",
+    "rol": "ADMIN",
+    "nombre": "Sofía",
+    "apellido": "Martínez"
+  },
+  {
+    "correo": "admin3@juegosxd.com",
+    "contrasena": "admin345",
+    "rol": "ADMIN",
+    "nombre": "Carlos",
+    "apellido": "Ramírez"
+  },
+  {
+    "correo": "admin4@juegosxd.com",
+    "contrasena": "admin456",
+    "rol": "ADMIN",
+    "nombre": "Valentina",
+    "apellido": "López"
+  },
+  {
+    "correo": "juanp@juegosxd.com",
+    "contrasena": "juan123",
+    "rol": "USER",
+    "nombre": "Juan",
+    "apellido": "Pérez"
+  },
+  {
+    "correo": "luciap@juegosxd.com",
+    "contrasena": "lucia123",
+    "rol": "USER",
+    "nombre": "Lucía",
+    "apellido": "González"
+  },
+  {
+    "correo": "pedror@juegosxd.com",
+    "contrasena": "pedro123",
+    "rol": "USER",
+    "nombre": "Pedro",
+    "apellido": "Rojas"
+  },
+  {
+    "correo": "mariac@juegosxd.com",
+    "contrasena": "maria123",
+    "rol": "USER",
+    "nombre": "María",
+    "apellido": "Castro"
+  },
+  {
+    "correo": "diegoa@juegosxd.com",
+    "contrasena": "diego123",
+    "rol": "USER",
+    "nombre": "Diego",
+    "apellido": "Alvarez"
+  },
+  {
+    "correo": "anaruiz@juegosxd.com",
+    "contrasena": "ana123",
+    "rol": "USER",
+    "nombre": "Ana",
+    "apellido": "Ruiz"
+  },
+  {
+    "correo": "manuelm@juegosxd.com",
+    "contrasena": "manuel123",
+    "rol": "USER",
+    "nombre": "Manuel",
+    "apellido": "Morales"
+  },
+  {
+    "correo": "paular@juegosxd.com",
+    "contrasena": "paula123",
+    "rol": "USER",
+    "nombre": "Paula",
+    "apellido": "Ramos"
+  },
+  {
+    "correo": "alejandrag@juegosxd.com",
+    "contrasena": "ale123",
+    "rol": "USER",
+    "nombre": "Alejandra",
+    "apellido": "Guzmán"
+  },
+  {
+    "correo": "sebastianv@juegosxd.com",
+    "contrasena": "sebastian123",
+    "rol": "USER",
+    "nombre": "Sebastián",
+    "apellido": "Vargas"
+  },
+  {
+    "correo": "carolinah@juegosxd.com",
+    "contrasena": "caro123",
+    "rol": "USER",
+    "nombre": "Carolina",
+    "apellido": "Herrera"
+  },
+  {
+    "correo": "luisf@juegosxd.com",
+    "contrasena": "luis123",
+    "rol": "USER",
+    "nombre": "Luis",
+    "apellido": "Fernández"
+  },
+  {
+    "correo": "jimenap@juegosxd.com",
+    "contrasena": "jimena123",
+    "rol": "USER",
+    "nombre": "Jimena",
+    "apellido": "Paredes"
+  },
+  {
+    "correo": "andresq@juegosxd.com",
+    "contrasena": "andres123",
+    "rol": "USER",
+    "nombre": "Andrés",
+    "apellido": "Quiroz"
+  },
+  {
+    "correo": "camilar@juegosxd.com",
+    "contrasena": "camila123",
+    "rol": "USER",
+    "nombre": "Camila",
+    "apellido": "Rodríguez"
+  },
+  {
+    "correo": "ricardol@juegosxd.com",
+    "contrasena": "ricardo123",
+    "rol": "USER",
+    "nombre": "Ricardo",
+    "apellido": "Luna"
+  },
+  {
+    "correo": "martinb@juegosxd.com",
+    "contrasena": "martin123",
+    "rol": "USER",
+    "nombre": "Martín",
+    "apellido": "Bustos"
+  },
+  {
+    "correo": "alejandroz@juegosxd.com",
+    "contrasena": "alejandro123",
+    "rol": "USER",
+    "nombre": "Alejandro",
+    "apellido": "Zapata"
+  }
+]

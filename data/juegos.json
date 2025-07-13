@@ -1,0 +1,260 @@
+[
+  {
+    "titulo": "The Witcher 3: Wild Hunt",
+    "descripcion": "Una historia épica de un cazador de monstruos buscando a su hija adoptiva en un mundo devastado por la guerra.",
+    "precio": 39.99,
+    "porcentajeOferta": 50,
+    "trailerUrl": "https://www.youtube.com/watch?v=c0i88t0Kacs&ab_channel=TheWitcher",
+    "rating": 4.9,
+    "fechaLanzamiento": "2015-05-19T00:00:00.000Z",
+    "fechaSubida": "2015-05-19T02:03:00.000Z"
+  },
+  {
+    "titulo": "Elden Ring",
+    "descripcion": "Explora un mundo fantástico creado por Hidetaka Miyazaki y George R. R. Martin.",
+    "precio": 59.99,
+    "porcentajeOferta": 30,
+    "trailerUrl": "https://www.youtube.com/watch?v=E3Huy2cdih0&t=5s&ab_channel=BANDAINAMCOEurope",
+    "rating": 4.8,
+    "fechaLanzamiento": "2022-02-25T00:00:00.000Z",
+    "fechaSubida": "2022-02-25T01:37:00.000Z"
+  },
+  {
+    "titulo": "God of War (2018)",
+    "descripcion": "Un viaje brutal y emotivo de Kratos y su hijo en la mitología nórdica.",
+    "precio": 49.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=K0u_kAWLJOA&ab_channel=PlayStation",
+    "rating": 4.9,
+    "fechaLanzamiento": "2018-04-20T00:00:00.000Z",
+    "fechaSubida": "2018-04-20T01:59:00.000Z"
+  },
+  {
+    "titulo": "Red Dead Redemption 2",
+    "descripcion": "Vive como un forajido en los últimos días del Salvaje Oeste.",
+    "precio": 28.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=gmA6MrX81z4&ab_channel=RockstarGames",
+    "rating": 4.9,
+    "fechaLanzamiento": "2018-10-26T00:00:00.000Z",
+    "fechaSubida": "2018-10-26T02:21:00.000Z"
+  },
+  {
+    "titulo": "Minecraft",
+    "descripcion": "Un mundo de bloques con infinitas posibilidades para construir y explorar.",
+    "precio": 26.95,
+    "porcentajeOferta": 10,
+    "trailerUrl": "https://www.youtube.com/watch?v=MmB9b5njVbA&ab_channel=Minecraft",
+    "rating": 4.8,
+    "fechaLanzamiento": "2011-11-18T00:00:00.000Z",
+    "fechaSubida": "2011-11-18T01:12:00.000Z"
+  },
+  {
+    "titulo": "Cyberpunk 2077",
+    "descripcion": "Un RPG de mundo abierto futurista ambientado en la ciudad de Night City.",
+    "precio": 59.99,
+    "porcentajeOferta": 15,
+    "trailerUrl": "https://www.youtube.com/watch?v=8X2kIfS6fb8&ab_channel=Cyberpunk2077",
+    "rating": 3.8,
+    "fechaLanzamiento": "2020-12-10T00:00:00.000Z",
+    "fechaSubida": "2020-12-10T01:51:00.000Z"
+  },
+  {
+    "titulo": "Among Us",
+    "descripcion": "Juego de deducción social donde los tripulantes intentan descubrir a los impostores.",
+    "precio": 4.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=9pyYq9lpjls&ab_channel=GameSpotTrailers",
+    "rating": 4.2,
+    "fechaLanzamiento": "2018-06-15T00:00:00.000Z",
+    "fechaSubida": "2018-06-15T01:45:00.000Z"
+  },
+  {
+    "titulo": "Fortnite",
+    "descripcion": "Un battle royale rápido con mecánicas de construcción.",
+    "precio": 25.00,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=iDzAmxY2i6Q&ab_channel=Fortnite",
+    "rating": 4.8,
+    "fechaLanzamiento": "2017-07-21T00:00:00.000Z",
+    "fechaSubida": "2017-07-21T02:05:00.000Z"
+  },
+  {
+    "titulo": "Halo Infinite",
+    "descripcion": "La última entrega de la saga Halo, continúa el viaje del Jefe Maestro.",
+    "precio": 50.00,
+    "porcentajeOferta": 10,
+    "trailerUrl": "https://www.youtube.com/watch?v=PyMlV5_HRWk&ab_channel=HALO",
+    "rating": 3.7,
+    "fechaLanzamiento": "2021-12-08T00:00:00.000Z",
+    "fechaSubida": "2021-12-08T01:28:00.000Z"
+  },
+  {
+    "titulo": "Dark Souls III",
+    "descripcion": "RPG desafiante con una historia profunda y dificultad brutal.",
+    "precio": 39.99,
+    "porcentajeOferta": 30,
+    "trailerUrl": "https://www.youtube.com/watch?v=cWBwFhUv1-8&ab_channel=PlayStation",
+    "rating": 4.7,
+    "fechaLanzamiento": "2016-04-12T00:00:00.000Z",
+    "fechaSubida": "2016-04-12T01:34:00.000Z"
+  },
+  {
+    "titulo": "Overwatch 2",
+    "descripcion": "Shooter de héroes con acción por equipos y personajes únicos.",
+    "precio": 39.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=Owp-FNypyZI&ab_channel=OverwatchLatAm",
+    "rating": 4.1,
+    "fechaLanzamiento": "2022-10-04T00:00:00.000Z",
+    "fechaSubida": "2022-10-04T01:52:00.000Z"
+  },
+  {
+    "titulo": "Apex Legends",
+    "descripcion": "Battle royale gratis y rápido con personajes con habilidades únicas.",
+    "precio": 21.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=hg0_PBw1OMI&ab_channel=ApexLegends",
+    "rating": 4.8,
+    "fechaLanzamiento": "2019-02-04T00:00:00.000Z",
+    "fechaSubida": "2019-02-04T02:10:00.000Z"
+  },
+  {
+    "titulo": "Resident Evil Village",
+    "descripcion": "Sobrevive al horror en una aldea misteriosa llena de oscuros secretos.",
+    "precio": 29.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=ztj8fv6Ttp8&ab_channel=PlayStationEspa%C3%B1a",
+    "rating": 4.8,
+    "fechaLanzamiento": "2021-05-07T00:00:00.000Z",
+    "fechaSubida": "2021-05-07T01:14:00.000Z"
+  },
+  {
+    "titulo": "Call of Duty: Warzone",
+    "descripcion": "Battle royale gratuito con combate intenso y estrategia de equipo.",
+    "precio": 15.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=qiR3AAnwSmo&ab_channel=CallofDutyEspa%C3%B1ol",
+    "rating": 4.8,
+    "fechaLanzamiento": "2020-03-10T00:00:00.000Z",
+    "fechaSubida": "2020-03-10T02:42:00.000Z"
+  },
+  {
+    "titulo": "Death Stranding",
+    "descripcion": "Entrega paquetes a través de una América fracturada y reconecta ciudades aisladas.",
+    "precio": 89.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=t6baMXP10aM",
+    "rating": 4.9,
+    "fechaLanzamiento": "2019-11-08T00:00:00.000Z",
+    "fechaSubida": "2019-11-08T02:20:00.000Z"
+  },
+  {
+    "titulo": "Death Stranding 2: On the Beach",
+    "descripcion": "La secuela de Death Stranding te lleva a una aventura posapocalíptica con Sam Porter Bridges en Australia, explorando conexiones humanas y misterios sobrenaturales.",
+    "precio": 69.99,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=eT_A2gPhTIw",
+    "rating": 4.7,
+    "fechaLanzamiento": "2025-06-26T00:00:00.000Z",
+    "fechaSubida": "2025-06-26T01:37:00.000Z"
+},
+ {
+    "titulo": "League of Legends",
+    "descripcion": "Un juego de arena de batalla multijugador en línea (MOBA) donde dos equipos compiten para destruir el nexo enemigo.",
+    "precio": 0.00,
+    "porcentajeOferta": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=I76wvt0aEE4&ab_channel=LeagueofLegends",
+    "rating": 4.5,
+    "fechaLanzamiento": "2009-10-27T00:00:00.000Z",
+    "fechaSubida": "2009-10-27T02:13:00.000Z"
+ },
+ {
+  "titulo": "EA Sports FC 25",
+  "descripcion": "Simulación de fútbol con licencias oficiales, trae nuevos modos como Rush y una IA táctica mejorada.",
+  "precio": 59.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=pBM2xyco_Kg&vl=en",
+  "rating": 4.5,
+  "fechaLanzamiento": "2024-09-27T00:00:00.000Z",
+  "fechaSubida": "2024-09-27T01:52:00.000Z"
+},
+{
+  "titulo": "Marvel Rivals",
+  "descripcion": "Shooter de héroes en tercera persona con personajes icónicos de Marvel en equipos 6 contra 6.",
+  "precio": 35.55,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=-b0veB7q9P4&ab_channel=MarvelEntertainment",
+  "rating": 4.6,
+  "fechaLanzamiento": "2024-12-06T00:00:00.000Z",
+  "fechaSubida": "2024-12-06T01:45:00.000Z"
+},
+{
+  "titulo": "Valorant",
+  "descripcion": "Shooter táctico 5v5 con personajes y habilidades únicas, estilo hero-shooter.",
+  "precio": 15.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=v8SjPWuCPNw&ab_channel=VALORANT-LATAM",
+  "rating": 4.5,
+  "fechaLanzamiento": "2020-06-02T00:00:00.000Z",
+  "fechaSubida": "2020-06-02T01:30:00.000Z"
+},
+{
+  "titulo": "Rust",
+  "descripcion": "Survive en un mundo postapocalíptico, recolecta recursos, construye bases y enfrenta a otros jugadores.",
+  "precio": 39.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=LGcECozNXEw&ab_channel=Facepunch",
+  "rating": 4.3,
+  "fechaLanzamiento": "2018-02-08T00:00:00.000Z",
+  "fechaSubida": "2018-02-08T01:55:00.000Z"
+},
+{
+  "titulo": "Dune: Awakening",
+  "descripcion": "MMO sandbox en el universo de Dune, supervivencia, combate y facciones sobre la especia.",
+  "precio": 59.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=ztdVjiRpYfo&ab_channel=Funcom",
+  "rating": 4.0,
+  "fechaLanzamiento": "2024-01-26T00:00:00.000Z",
+  "fechaSubida": "2024-01-26T02:05:00.000Z"
+},
+{
+  "titulo": "NBA 2K25",
+  "descripcion": "Simulación de baloncesto con modos de carrera, MyTeam, MyLeague y gráficos realistas.",
+  "precio": 69.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=qx0A921z8mA&ab_channel=NBA2K",
+  "rating": 4.2,
+  "fechaLanzamiento": "2024-09-06T00:00:00.000Z",
+  "fechaSubida": "2024-09-06T01:40:00.000Z"
+},
+{
+  "titulo": "Black Myth: Wukong",
+  "descripcion": "RPG de acción basado en la mitología china, inspirado en la leyenda del Rey Mono.",
+  "precio": 49.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=pnSsgRJmsCc&ab_channel=PlayStation",
+  "rating": 4.6,
+  "fechaLanzamiento": "2024-08-20T00:00:00.000Z",
+  "fechaSubida": "2024-08-20T01:23:00.000Z"
+},
+{
+  "titulo": "Assassin's Creed Shadows",
+  "descripcion": "Nueva entrega de Assassin's Creed ambientada en Japón feudal, sigilo y acción en un mapa abierto.",
+  "precio": 69.99,
+  "porcentajeOferta": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=vovkzbtYBC8&ab_channel=Ubisoft",
+  "rating": 4.4,
+  "fechaLanzamiento": "2024-11-15T00:00:00.000Z",
+  "fechaSubida": "2024-11-15T01:58:00.000Z"
+}
+
+
+
+
+
+
+
+ 
+]

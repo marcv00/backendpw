@@ -1,0 +1,50 @@
+[
+  {
+    "correoUsuario": "juanp@juegosxd.com",
+    "total": 50.99,
+    "fechaVenta": "2025-05-28T15:24:00.000Z",
+    "juegos": ["Cyberpunk 2077"]
+  },
+  {
+    "correoUsuario": "juanp@juegosxd.com",
+    "total": 53.25,
+    "fechaVenta": "2025-06-03T11:25:00.000Z",
+    "juegos": ["Minecraft", "Red Dead Redemption 2"]
+  },
+  {
+    "correoUsuario": "luciap@juegosxd.com",
+    "total": 59.99,
+    "fechaVenta": "2025-05-18T18:10:00.000Z",
+    "juegos": ["The Witcher 3: Wild Hunt", "Overwatch 2"]
+  },
+  {
+    "correoUsuario": "pedror@juegosxd.com",
+    "total": 0.00,
+    "fechaVenta": "2025-05-31T13:20:00.000Z",
+    "juegos": ["League of Legends"]
+  },
+  {
+    "correoUsuario": "pedror@juegosxd.com",
+    "total": 40.99,
+    "fechaVenta": "2025-06-08T16:45:00.000Z",
+    "juegos": ["Valorant", "Fortnite"]
+  },
+  {
+    "correoUsuario": "mariac@juegosxd.com",
+    "total": 49.99,
+    "fechaVenta": "2025-05-23T12:00:00.000Z",
+    "juegos": ["God of War (2018)"]
+  },
+  {
+    "correoUsuario": "manuelm@juegosxd.com",
+    "total": 39.99,
+    "fechaVenta": "2025-07-04T11:30:00.000Z",
+    "juegos": ["Rust"]
+  },
+  {
+    "correoUsuario": "camilar@juegosxd.com",
+    "total": 4.99,
+    "fechaVenta": "2025-06-27T17:15:00.000Z",
+    "juegos": ["Among Us"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "PC",
+    "color": "#5A5A5A"
+  },
+  {
+    "nombre": "PS5",
+    "color": "#0F25E6"
+  },
+  {
+    "nombre": "PS4",
+    "color": "#1c1c8e"
+  },
+  {
+    "nombre": "Xbox-X",
+    "color": "#107C10"
+  },
+  {
+    "nombre": "Xbox-One",
+    "color": "#086108"
+  },
+  {
+    "nombre": "Switch",
+    "color": "#e60012"
+  }
+]
