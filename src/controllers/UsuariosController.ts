@@ -1,5 +1,10 @@
 import express, { Request, Response } from "express"
 import { PrismaClient, Usuario } from "../generated/prisma"
+import jwt, {SignOptions} from "jsonwebtoken";
+import { verificarToken } from "../middlewares/authMiddleware";
+
+
+const JWT_SECRET = process.env.JWT_SECRET || "";
 
 const UsuariosController = () => {
     const router = express.Router()
@@ -34,56 +39,49 @@ const UsuariosController = () => {
         }
     })
 
-    // POST /agregar - Agregar juego al "carrito" (usando JuegoXUsuario)
-    router.post("/agregar-a-carrito", async (req: Request, res: Response) => {
-        const { usuarioId, juegoId } = req.body
+    // POST /usuarios/agregar-a-carrito Agregar juego al "carrito" del usuario autenticado
+    router.post("/agregar-a-carrito", verificarToken, async (req: Request, res: Response) => {
+        const { juegoId } = req.body;
+        const usuarioId = (req as any).usuario?.id;
 
         if (!usuarioId || !juegoId) {
-            return res.status(400).json({ error: "usuarioId y juegoId son requeridos" })
+            return res.status(400).json({ error: "usuarioId y juegoId son requeridos" });
         }
 
         try {
-            const existe = await prisma.juegoXUsuario.findFirst({
+            const existe = await prisma.carrito.findFirst({
                 where: { usuarioId, juegoId }
-            })
+            });
 
             if (existe) {
-                return res.status(409).json({ error: "El juego ya está en el carrito" })
+                return res.status(409).json({ error: "El juego ya está en el carrito" });
             }
 
-            await prisma.juegoXUsuario.create({
+            await prisma.carrito.create({
                 data: { usuarioId, juegoId }
-            })
+            });
 
-            res.json({ mensaje: "Juego agregado al carrito (simulado)" })
+            res.json({ mensaje: "Juego agregado al carrito correctamente" });
         } catch (error) {
-            console.error("Error al agregar al carrito simulado:", error)
-            res.status(500).json({ error: "Error al agregar al carrito" })
+            console.error("Error al agregar al carrito:", error);
+            res.status(500).json({ error: "Error interno del servidor" });
         } finally {
-            await prisma.$disconnect()
+            await prisma.$disconnect();
         }
-    })
-    // DELETE /usuarios/eliminar-del-carrito
-    router.delete("/eliminar-del-carrito", async (req: Request, res: Response) => {
-        console.log("DELETE BODY:", req.body); // 👈 esto es crucial
+    });
 
-    const { usuarioId, juegoId } = req.body;
+    // DELETE /usuarios/eliminar-del-carrito  Quitar juego del "carrito" del usuario autenticado
+    router.delete("/eliminar-del-carrito", verificarToken, async (req: Request, res: Response) => {
+        const { juegoId } = req.body;
+        const usuarioId = (req as any).usuario?.id;
 
-    if (!usuarioId || !juegoId) {
-    return res.status(400).json({ error: "usuarioId y juegoId válidos son requeridos" });
-    }
-
-
-        if (isNaN(usuarioId) || isNaN(juegoId)) {
+        if (!usuarioId || !juegoId) {
             return res.status(400).json({ error: "usuarioId y juegoId válidos son requeridos" });
         }
 
         try {
-            await prisma.juegoXUsuario.deleteMany({
-                where: {
-                    usuarioId,
-                    juegoId
-                }
+            await prisma.carrito.deleteMany({
+                where: { usuarioId, juegoId }
             });
 
             res.json({ mensaje: "Juego eliminado del carrito correctamente" });
@@ -95,16 +93,16 @@ const UsuariosController = () => {
         }
     });
 
+    // GET /usuarios/carrito  Obtener los juegos en el "carrito" del usuario autenticado
+    router.get("/carrito", verificarToken, async (req: Request, res: Response) => {
+        const usuarioId = (req as any).usuario?.id;
 
-    router.get("/carrito/:usuarioId", async (req: Request, res: Response) => {
-        const usuarioId = parseInt(req.params.usuarioId)
-
-        if (isNaN(usuarioId)) {
-            return res.status(400).json({ error: "usuarioId inválido" })
+        if (!usuarioId) {
+            return res.status(401).json({ error: "No autorizado" });
         }
 
         try {
-            const juegos = await prisma.juegoXUsuario.findMany({
+            const juegos = await prisma.carrito.findMany({
                 where: { usuarioId },
                 select: {
                     juego: {
@@ -121,16 +119,19 @@ const UsuariosController = () => {
                         }
                     }
                 }
-            })
+            });
 
-            res.json(juegos.map(entry => entry.juego))
+            res.json(juegos.map(entry => entry.juego));
         } catch (error) {
-            console.error("Error al obtener el carrito:", error)
-            res.status(500).json({ error: "Error al obtener el carrito" })
+            console.error("Error al obtener el carrito:", error);
+            res.status(500).json({ error: "Error al obtener el carrito" });
         } finally {
-            await prisma.$disconnect()
+            await prisma.$disconnect();
         }
-    })
+    });
+
+
+    
     // GET /usuarios/juegos - Obtener todos los juegos disponibles
     router.get("/juegos", async (_req: Request, res: Response) => {
 
@@ -181,6 +182,58 @@ const UsuariosController = () => {
             await prisma.$disconnect()
         }
     })
+
+    // POST /usuarios/login - Registrar un nuevo usuario
+    router.post("/login", async (req: Request, res: Response) => {
+        const { correo, contrasena } = req.body;
+
+        if (!correo || !contrasena) {
+            return res.status(400).json({ error: "Correo y contraseña son requeridos" });
+        }
+
+        try {
+            const usuario = await prisma.usuario.findUnique({
+                where: { correo }
+            });
+
+            if (!usuario) {
+                return res.status(404).json({ error: "Usuario no encontrado" });
+            }
+
+            if (usuario.contrasena !== contrasena) {
+                return res.status(401).json({ error: "Contraseña incorrecta" });
+            }
+
+            const JWT_SECRET = process.env.JWT_SECRET || "fallback_secret"; // nunca null o undefined
+            const token = jwt.sign(
+                {
+                    id: usuario.id,
+                    correo: usuario.correo,
+                    rol: usuario.rol
+                },
+                JWT_SECRET,
+                {
+                    expiresIn: process.env.JWT_EXPIRES_IN || "1h"
+                } as SignOptions
+            );
+
+            res.json({
+                mensaje: "Login exitoso",
+                token,
+                usuario: {
+                    id: usuario.id,
+                    nombre: usuario.nombre,
+                    correo: usuario.correo,
+                    rol: usuario.rol
+                }
+            });
+        } catch (error) {
+            console.error("Error en login:", error);
+            res.status(500).json({ error: "Error interno del servidor" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
 
 
     return router

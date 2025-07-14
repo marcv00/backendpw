@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors({
     origin : process.env.FRONTEND_URL,
     methods : ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["usuarioid", "content-type"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials : true
 })) // Configurando cors
 

@@ -20,6 +20,7 @@ const JuegosController = () => {
                     descripcion: true,
                     precio: true,
                     porcentajeOferta: true,
+                    slug: true,
                     fotos: {
                         take: 1,
                         orderBy: { id: 'asc' },
@@ -57,6 +58,7 @@ const JuegosController = () => {
                     descripcion: true,
                     precio: true,
                     porcentajeOferta: true,
+                    slug: true,
                     fotos: {
                         take: 1,
                         orderBy: { id: "asc" },
@@ -97,7 +99,7 @@ const JuegosController = () => {
     });
 
 
-
+    // GET /explorar - Obtener todos los juegos con sus categorias y plataformas
     router.get("/explorar", async (_req: Request, res: Response) => {
         const prisma = new PrismaClient()
 
@@ -112,6 +114,7 @@ const JuegosController = () => {
                     descripcion: true,
                     precio: true,
                     porcentajeOferta: true,
+                    slug: true,
                     fotos: {
                         take: 1,
                         orderBy: { id: 'asc' },
@@ -210,7 +213,6 @@ const JuegosController = () => {
         }
     });
 
-
     // GET /ventas-mensuales - estadísticas de ventas para AdminStats
     router.get("/ventas-mensuales", async (_req: Request, res: Response) => {
         const prisma = new PrismaClient();
@@ -257,6 +259,61 @@ const JuegosController = () => {
         }
     });
 
+  
+    // GET /slug/:slug - Obtener detalle de un juego por su slug
+    router.get("/slug/:slug", async (req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+        const { slug } = req.params;
+
+        try {
+            const juego = await prisma.juego.findUnique({
+                where: { slug },
+                select: {
+                    id: true,
+                    titulo: true,
+                    descripcion: true,
+                    precio: true,
+                    porcentajeOferta: true,
+                    slug: true,
+                    fotos: {
+                        orderBy: { id: 'asc' },
+                        select: { url: true }
+                    },
+                    categorias: {
+                        select: {
+                            categoria: {
+                                select: { nombre: true }
+                            }
+                        }
+                    },
+                    plataformas: {
+                        select: {
+                            plataforma: {
+                                select: { nombre: true }
+                            }
+                        }
+                    }
+                }
+            });
+
+            if (!juego) {
+                return res.status(404).json({ error: "Juego no encontrado" });
+            }
+
+            const juegoFormateado = {
+                ...juego,
+                categorias: juego.categorias.map(c => c.categoria.nombre),
+                plataformas: juego.plataformas.map(p => p.plataforma.nombre)
+            };
+
+            res.json(juegoFormateado);
+        } catch (error) {
+            console.error("Error al obtener juego por slug:", error);
+            res.status(500).json({ error: "Error al obtener el juego" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
 
 
 
