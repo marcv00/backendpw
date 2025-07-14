@@ -214,9 +214,6 @@ const JuegosController = () => {
     });
 
 
-
-    
-    
     // GET /slug/:slug - Obtener detalle de un juego por su slug
     router.get("/slug/:slug", async (req: Request, res: Response) => {
         const prisma = new PrismaClient();
