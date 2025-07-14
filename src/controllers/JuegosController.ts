@@ -211,6 +211,51 @@ const JuegosController = () => {
     });
 
 
+    // GET /ventas-mensuales - estadísticas de ventas para AdminStats
+    router.get("/ventas-mensuales", async (_req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+
+        try {
+            const ventas = await prisma.venta.findMany({
+                select: { fechaVenta: true, total: true },
+            });
+
+            const ventasPorMes: { [mes: string]: number } = {};
+
+            for (const venta of ventas) {
+                const mes = venta.fechaVenta.toLocaleString("es-PE", {
+                    month: "long",
+                });
+                ventasPorMes[mes] = (ventasPorMes[mes] || 0) + venta.total;
+            }
+
+            const datosMensuales = Object.entries(ventasPorMes).map(
+                ([mes, total]) => ({ mes, total })
+            );
+
+            const total = datosMensuales.reduce((s, v) => s + v.total, 0);
+            const promedioMensual =
+                datosMensuales.length > 0
+                    ? parseFloat((total / datosMensuales.length).toFixed(2))
+                    : 0;
+            const mesConMasVentas =
+                datosMensuales.reduce((a, b) =>
+                    a.total > b.total ? a : b
+                )?.mes ?? "";
+
+            res.json({
+                total,
+                promedioMensual,
+                mesConMasVentas,
+                datosMensuales,
+            });
+        } catch (error) {
+            console.error("Error al calcular estadísticas de ventas:", error);
+            res.status(500).json({ error: "Error al calcular estadísticas" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
 
 
 
