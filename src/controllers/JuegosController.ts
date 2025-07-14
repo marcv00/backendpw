@@ -87,8 +87,73 @@ const JuegosController = () => {
     })
 
 
+    router.get("/explorar", async (_req: Request, res: Response) => {
+        const prisma = new PrismaClient()
+    
+        try {
+            const juegos = await prisma.juego.findMany({
+                orderBy: {
+                    titulo: 'asc'
+                },
+                select: {
+                    id: true,
+                    titulo: true,
+                    descripcion: true,
+                    precio: true,
+                    porcentajeOferta: true,
+                    fotos: {
+                        take: 1,
+                        orderBy: { id: 'asc' },
+                        select: {
+                            url: true
+                        }
+                    },
+                    categorias: {
+                        select: {
+                            categoria: {
+                                select: {
+                                    nombre: true
+                                }
+                            }
+                        }
+                    },
+                    plataformas: {
+                        select: {
+                            plataforma: {
+                                select: {
+                                    nombre: true
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+    
+            const juegosFormateados = juegos.map(juego => ({
+                ...juego,
+                categorias: juego.categorias.map(c => c.categoria.nombre),
+                plataformas: juego.plataformas.map(p => p.plataforma.nombre)
+            }))
+    
+            res.json(juegosFormateados)
+        } catch (error) {
+            console.error("Error al obtener todos los juegos:", error)
+            res.status(500).json({ error: "Error al obtener todos los juegos" })
+        } finally {
+            await prisma.$disconnect()
+        }
+    })
+    
+    
+
+
+
 
     return router
 }
+
+
+
+
 
 export default JuegosController
