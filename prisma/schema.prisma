@@ -43,6 +43,7 @@ model Juego {
   rating           Float? // Calificación opcional
   fechaLanzamiento DateTime
   fechaSubida      DateTime @default(now())
+  reviewJuego      String? // Reseña del juego hecha por JuegosXD, opcional
 
   fotos       Foto[] // Relación uno a muchos: un juego puede tener muchas fotos
   categorias  CategoriaXJuego[] // Relación muchos a muchos con categorías

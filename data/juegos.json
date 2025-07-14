@@ -7,7 +7,8 @@
     "trailerUrl": "https://www.youtube.com/watch?v=c0i88t0Kacs&ab_channel=TheWitcher",
     "rating": 4.9,
     "fechaLanzamiento": "2015-05-19T00:00:00.000Z",
-    "fechaSubida": "2015-05-19T02:03:00.000Z"
+    "fechaSubida": "2015-05-19T02:03:00.000Z",
+    "reviewJuego": "The Witcher 3: Wild Hunt es una obra maestra del RPG moderno y uno de los títulos más ambiciosos de su generación. Ambientado en un mundo abierto vasto y detallado, el juego ofrece una experiencia narrativa profunda y emocional que destaca por su madurez. La calidad de la escritura, tanto en la historia principal como en las misiones secundarias, es simplemente excepcional. El sistema de combate es fluido y satisfactorio, combinando habilidades mágicas, espada y alquimia de forma estratégica. La ambientación y el diseño de sonido refuerzan la sensación de inmersión, haciendo que cada región se sienta viva y única. Además, la banda sonora acompaña con elegancia los momentos más intensos y melancólicos. La progresión del personaje es flexible, permitiendo personalizar a Geralt según el estilo de juego del usuario. El nivel de detalle en los entornos y personajes es impresionante incluso muchos años después de su lanzamiento. Con un promedio de calificación de 4.9, The Witcher 3 se posiciona como uno de los mejores juegos de todos los tiempos y una joya imprescindible para cualquier amante del género."
   },
   {
     "titulo": "Elden Ring",
@@ -17,7 +18,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=E3Huy2cdih0&t=5s&ab_channel=BANDAINAMCOEurope",
     "rating": 4.8,
     "fechaLanzamiento": "2022-02-25T00:00:00.000Z",
-    "fechaSubida": "2022-02-25T01:37:00.000Z"
+    "fechaSubida": "2022-02-25T01:37:00.000Z",
+    "reviewJuego": "Elden Ring redefine los estándares del género de acción y aventura con mundo abierto, fusionando el diseño desafiante característico de FromSoftware con una libertad sin precedentes. El juego invita a explorar un universo oscuro, misterioso y fascinante creado en colaboración con George R. R. Martin. La dirección artística es sobresaliente, presentando paisajes majestuosos, ruinas ancestrales y enemigos tan bellos como aterradores. El combate conserva la precisión y tensión de la saga Souls, pero adaptado a una escala mucho mayor. La curva de dificultad está cuidadosamente diseñada para recompensar la perseverancia y la exploración. La música y el sonido ambiental sumergen al jugador en una atmósfera inquietante pero irresistible. Elden Ring destaca por su diseño no lineal, donde cada jugador traza su propio camino. La variedad de builds, armas y hechizos garantiza una altísima rejugabilidad. Con un promedio de 4.8, este título ya es considerado un clásico moderno que lleva el ADN de Miyazaki a nuevas alturas."
+
   },
   {
     "titulo": "God of War (2018)",
@@ -27,7 +30,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=K0u_kAWLJOA&ab_channel=PlayStation",
     "rating": 4.9,
     "fechaLanzamiento": "2018-04-20T00:00:00.000Z",
-    "fechaSubida": "2018-04-20T01:59:00.000Z"
+    "fechaSubida": "2018-04-20T01:59:00.000Z",
+    "reviewJuego": "God of War (2018) marca un renacer magistral de la saga, presentando una historia íntima y conmovedora sin sacrificar la acción brutal que la caracteriza. El enfoque narrativo más maduro, centrado en la relación entre Kratos y su hijo Atreus, brinda una dimensión emocional sin precedentes en la franquicia. La jugabilidad ha sido rediseñada con un sistema de combate más táctico y visceral, acompañado por un hacha que se siente icónica desde el primer momento. La cámara cercana potencia la inmersión, haciendo que cada combate se sienta intenso y personal. Los gráficos son de altísimo nivel, con una dirección artística que resalta tanto los paisajes nórdicos como los detalles de cada personaje. La exploración está perfectamente integrada, con secretos y desafíos que enriquecen la experiencia sin forzarla. El juego mantiene un ritmo excelente, equilibrando escenas emocionales con batallas memorables. Con una calificación promedio de 4.9, God of War (2018) es uno de los pilares narrativos y técnicos de la generación, recomendado tanto para veteranos como para nuevos jugadores."
+
   },
   {
     "titulo": "Red Dead Redemption 2",
@@ -37,7 +42,10 @@
     "trailerUrl": "https://www.youtube.com/watch?v=gmA6MrX81z4&ab_channel=RockstarGames",
     "rating": 4.9,
     "fechaLanzamiento": "2018-10-26T00:00:00.000Z",
-    "fechaSubida": "2018-10-26T02:21:00.000Z"
+    "fechaSubida": "2018-10-26T02:21:00.000Z",
+    "reviewJuego": "Red Dead Redemption 2 es una obra monumental que redefine lo que un mundo abierto puede ofrecer. Rockstar Games logró crear un universo vivo, orgánico y emocionalmente resonante que transporta al jugador a los últimos días del Salvaje Oeste. La historia de Arthur Morgan es rica en matices, con personajes complejos y diálogos memorables que dan peso a cada decisión. El nivel de detalle en los entornos, desde los campos nevados hasta las bulliciosas ciudades, es impresionante. El sistema de honor, las rutinas de los NPCs y la interacción con el entorno hacen que cada partida sea única. La banda sonora acompaña de forma sutil pero efectiva, y la jugabilidad combina acción, sigilo y exploración con maestría. Es una experiencia cinematográfica, emotiva y desafiante. Técnicamente sobresaliente, el juego se mantiene como uno de los estándares más altos en narrativa interactiva. Con una calificación de 4.9, es un clásico moderno y un imprescindible para cualquier amante de los videojuegos."
+
+
   },
   {
     "titulo": "Minecraft",
@@ -47,7 +55,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=MmB9b5njVbA&ab_channel=Minecraft",
     "rating": 4.8,
     "fechaLanzamiento": "2011-11-18T00:00:00.000Z",
-    "fechaSubida": "2011-11-18T01:12:00.000Z"
+    "fechaSubida": "2011-11-18T01:12:00.000Z",
+    "reviewJuego": "Minecraft es mucho más que un juego: es una herramienta de creatividad, exploración y aprendizaje que ha trascendido generaciones. Su propuesta aparentemente simple de construir con bloques esconde un universo infinito de posibilidades. Desde la supervivencia básica hasta la ingeniería compleja con redstone, cada jugador puede encontrar su propio camino. La estética minimalista se ha convertido en icónica, y el estilo visual permite que la imaginación del usuario sea el verdadero protagonista. La comunidad ha sido clave en su evolución, con mods, servidores y contenido generado por usuarios que amplían continuamente la experiencia. Además, su uso en educación y desarrollo de habilidades lo ha consolidado como una plataforma valiosa más allá del entretenimiento. La sensación de libertad y descubrimiento es constante, haciendo que cada mundo generado sea único. Minecraft ha definido una época y continúa siendo relevante más de una década después de su lanzamiento. Con un rating de 4.8, es uno de los títulos más influyentes y accesibles de todos los tiempos."
+
   },
   {
     "titulo": "Cyberpunk 2077",
@@ -57,7 +67,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=8X2kIfS6fb8&ab_channel=Cyberpunk2077",
     "rating": 3.8,
     "fechaLanzamiento": "2020-12-10T00:00:00.000Z",
-    "fechaSubida": "2020-12-10T01:51:00.000Z"
+    "fechaSubida": "2020-12-10T01:51:00.000Z",
+    "reviewJuego": "Cyberpunk 2077 es una ambiciosa aventura de rol que propone una inmersión profunda en la vibrante y decadente ciudad de Night City. El juego destaca por su impresionante dirección artística, que da vida a un mundo futurista plagado de luces de neón, tecnología avanzada y conflictos humanos. La narrativa central ofrece decisiones significativas, con ramificaciones que afectan tanto el desarrollo de la historia como las relaciones con los personajes. Las actuaciones, especialmente la de Keanu Reeves como Johnny Silverhand, añaden peso emocional a la experiencia. Si bien su lanzamiento fue marcado por problemas técnicos, CD Projekt RED ha trabajado activamente para mejorar y estabilizar el título. El sistema de personalización del personaje y la variedad de estilos de juego permiten adaptar la experiencia al gusto de cada jugador. A pesar de su rating de 3.8, Cyberpunk 2077 sigue siendo una propuesta valiente que ofrece una visión única del futuro distópico. Es un título que ha evolucionado con el tiempo y que merece ser (re)descubierto."
+
   },
   {
     "titulo": "Among Us",
@@ -67,7 +79,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=9pyYq9lpjls&ab_channel=GameSpotTrailers",
     "rating": 4.2,
     "fechaLanzamiento": "2018-06-15T00:00:00.000Z",
-    "fechaSubida": "2018-06-15T01:45:00.000Z"
+    "fechaSubida": "2018-06-15T01:45:00.000Z",
+    "reviewJuego": "Among Us se consolidó como uno de los fenómenos sociales más importantes del gaming contemporáneo. Su simplicidad mecánica, centrada en tareas y sabotajes dentro de una nave espacial, esconde un profundo sistema de interacción social. El juego destaca por cómo convierte la comunicación y la deducción en el eje central de la experiencia. Las partidas rápidas y la posibilidad de jugar con amigos o desconocidos generan situaciones impredecibles y altamente entretenidas. Su estética caricaturesca y accesible facilita su adopción por jugadores de todas las edades. Aunque fue lanzado originalmente en 2018, su popularidad explotó en 2020 gracias a streamers y creadores de contenido. InnerSloth supo mantener el interés con actualizaciones que expanden mapas, roles y personalización. Con un rating de 4.2, Among Us es una prueba de que un diseño inteligente y bien ejecutado puede triunfar sin depender de gráficos de alta gama. Es ideal para quienes buscan partidas dinámicas, risas y momentos de tensión social."
+
   },
   {
     "titulo": "Fortnite",
@@ -77,7 +91,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=iDzAmxY2i6Q&ab_channel=Fortnite",
     "rating": 4.8,
     "fechaLanzamiento": "2017-07-21T00:00:00.000Z",
-    "fechaSubida": "2017-07-21T02:05:00.000Z"
+    "fechaSubida": "2017-07-21T02:05:00.000Z",
+    "reviewJuego": "Fortnite revolucionó el género battle royale al combinar construcción, combate dinámico y una estética vibrante. Epic Games logró construir un ecosistema que va mucho más allá del juego tradicional, con eventos en vivo, colaboraciones culturales y actualizaciones constantes. Su jugabilidad es frenética pero accesible, permitiendo a jugadores de distintos niveles encontrar un ritmo propio. La mecánica de construcción aporta una capa táctica única que lo diferencia de sus competidores. Además, su modelo gratuito con monetización mediante cosméticos ha sido un referente para toda la industria. El juego está en constante evolución, con nuevas temporadas que introducen cambios sustanciales en la narrativa, el mapa y la jugabilidad. El diseño de sonido, las animaciones y los modos experimentales hacen que la experiencia se mantenga fresca año tras año. Con una calificación de 4.8, Fortnite es mucho más que una moda: es un fenómeno cultural y una plataforma de expresión digital."
+
   },
   {
     "titulo": "Halo Infinite",
@@ -87,7 +103,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=PyMlV5_HRWk&ab_channel=HALO",
     "rating": 3.7,
     "fechaLanzamiento": "2021-12-08T00:00:00.000Z",
-    "fechaSubida": "2021-12-08T01:28:00.000Z"
+    "fechaSubida": "2021-12-08T01:28:00.000Z",
+    "reviewJuego": "Halo Infinite representa el retorno de una de las franquicias más icónicas del gaming moderno. Esta entrega busca equilibrar la nostalgia de los fans veteranos con nuevas propuestas jugables. El combate conserva la esencia clásica de Halo, con mecánicas precisas, movilidad fluida y un diseño de armas variado. La campaña ofrece un enfoque semimundo abierto que le da frescura a la estructura tradicional de la saga. Visualmente, el juego presenta paisajes amplios y detallados, aunque con algunas limitaciones técnicas respecto a otros títulos actuales. El multijugador gratuito fue bien recibido por su jugabilidad pulida y balanceada, aunque tuvo críticas por el sistema de progresión. El Jefe Maestro vuelve como protagonista absoluto, acompañado de una narrativa que explora nuevos matices emocionales. Pese a algunas críticas iniciales, Halo Infinite es una base sólida para el futuro de la saga. Con una calificación de 3.7, ofrece una experiencia competente con potencial de crecer a través de actualizaciones y contenido futuro."
+
   },
   {
     "titulo": "Dark Souls III",
@@ -97,7 +115,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=cWBwFhUv1-8&ab_channel=PlayStation",
     "rating": 4.7,
     "fechaLanzamiento": "2016-04-12T00:00:00.000Z",
-    "fechaSubida": "2016-04-12T01:34:00.000Z"
+    "fechaSubida": "2016-04-12T01:34:00.000Z",
+    "reviewJuego": "Dark Souls III es la culminación de una de las sagas más influyentes en la historia reciente del videojuego. FromSoftware ofrece un título que perfecciona su fórmula característica de dificultad exigente, exploración críptica y narrativa ambiental. Cada enemigo, jefe y escenario está diseñado con una intención clara, desafiando al jugador tanto en habilidad como en paciencia. Su atmósfera oscura y melancólica, reforzada por una dirección de arte impecable, evoca un mundo que se desmorona pero aún lucha por mantener su esencia. El combate es rápido, preciso y brutal, con una amplia variedad de armas y estilos para personalizar la experiencia. La música acompaña de forma majestuosa los momentos más épicos y trágicos del juego. Aunque su historia puede parecer enigmática, recompensa a quienes se sumergen en su lore. Con una calificación de 4.7, Dark Souls III es una obra desafiante que no se rinde ante el jugador, sino que lo invita a superarse constantemente. Es, sin dudas, un título esencial del RPG moderno."
+
   },
   {
     "titulo": "Overwatch 2",
@@ -107,7 +127,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=Owp-FNypyZI&ab_channel=OverwatchLatAm",
     "rating": 4.1,
     "fechaLanzamiento": "2022-10-04T00:00:00.000Z",
-    "fechaSubida": "2022-10-04T01:52:00.000Z"
+    "fechaSubida": "2022-10-04T01:52:00.000Z",
+    "reviewJuego": "Overwatch 2 continúa el legado del shooter de héroes que revolucionó el género en 2016. Esta entrega introduce una nueva estructura con equipos de 5 jugadores y una jugabilidad más agresiva, centrada en la acción directa y los cambios de ritmo dinámicos. Con nuevos personajes, mapas y modos, el juego amplía su universo y sigue apostando por un diseño colorido, vibrante y accesible. Las habilidades únicas de cada héroe promueven una cooperación estratégica que recompensa el juego en equipo. A pesar de algunas controversias por sus decisiones de monetización y contenidos iniciales, Overwatch 2 mantiene una base sólida gracias a su pulida jugabilidad y balance competitivo. Las actualizaciones constantes y el enfoque en eSports ayudan a mantener su relevancia en el mercado. Su rating de 4.1 refleja tanto la expectativa como el desafío de continuar una franquicia con una comunidad apasionada. Overwatch 2 sigue siendo una opción ideal para quienes buscan acción táctica y un roster carismático."
+
   },
   {
     "titulo": "Apex Legends",
@@ -117,7 +139,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=hg0_PBw1OMI&ab_channel=ApexLegends",
     "rating": 4.8,
     "fechaLanzamiento": "2019-02-04T00:00:00.000Z",
-    "fechaSubida": "2019-02-04T02:10:00.000Z"
+    "fechaSubida": "2019-02-04T02:10:00.000Z",
+    "reviewJuego": "Apex Legends irrumpió en el mercado del battle royale con una propuesta fresca, veloz y centrada en el trabajo en equipo. Desarrollado por Respawn Entertainment, el juego combina la movilidad de los shooters modernos con un sistema de personajes (legends) que ofrece habilidades únicas y complementarias. Desde su lanzamiento, ha destacado por su ritmo frenético, excelente diseño de mapas y un sistema de comunicación revolucionario sin necesidad de micrófono. Su universo compartido con Titanfall le otorga profundidad y coherencia. La progresión es constante, con eventos y temporadas que introducen contenido nuevo regularmente. Además, su modelo gratuito y su enfoque competitivo han sido clave para su éxito. El gunplay es uno de los más refinados del género, y la variedad de armas y estrategias hace que cada partida se sienta distinta. Con una calificación de 4.8, Apex Legends es una de las propuestas más sólidas, dinámicas y rejugables del panorama competitivo actual."
+
   },
   {
     "titulo": "Resident Evil Village",
@@ -127,7 +151,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=ztj8fv6Ttp8&ab_channel=PlayStationEspa%C3%B1a",
     "rating": 4.8,
     "fechaLanzamiento": "2021-05-07T00:00:00.000Z",
-    "fechaSubida": "2021-05-07T01:14:00.000Z"
+    "fechaSubida": "2021-05-07T01:14:00.000Z",
+    "reviewJuego": "Resident Evil Village representa una evolución natural y exitosa de la fórmula renovada que Capcom inició con su séptima entrega. Esta vez, el horror en primera persona se traslada a un entorno gótico y opresivo lleno de criaturas macabras, casas con historia y secretos por descubrir. La narrativa continúa la historia de Ethan Winters, pero se atreve a expandir el universo con un enfoque más orientado a la acción sin perder la esencia del survival horror. La ambientación es impecable, con un diseño artístico que remite a clásicos del terror europeo. La aldea, el castillo y sus alrededores ofrecen una diversidad de escenarios bien conectados. La jugabilidad es tensa y gratificante, combinando combate, exploración y resolución de acertijos. El rendimiento técnico y visual es excelente, incluso en consolas de anterior generación. Con un rating de 4.8, Village es una experiencia inmersiva, atrapante y con momentos memorables, digna de los mejores capítulos de esta longeva saga."
+
   },
   {
     "titulo": "Call of Duty: Warzone",
@@ -137,7 +163,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=qiR3AAnwSmo&ab_channel=CallofDutyEspa%C3%B1ol",
     "rating": 4.8,
     "fechaLanzamiento": "2020-03-10T00:00:00.000Z",
-    "fechaSubida": "2020-03-10T02:42:00.000Z"
+    "fechaSubida": "2020-03-10T02:42:00.000Z",
+    "reviewJuego": "Call of Duty: Warzone llevó la experiencia clásica de la saga a un nuevo nivel dentro del género battle royale. Con un enfoque centrado en la acción táctica, el juego ofrece partidas intensas donde la toma de decisiones, el posicionamiento y la coordinación son clave. Su propuesta se distingue por mecánicas como el Gulag y la posibilidad de revivir a los compañeros mediante la compra en estaciones, lo que añade una capa estratégica única. El gunplay es uno de los más pulidos del mercado, reflejo del legado de la franquicia. Warzone también destaca por su escala, permitiendo enfrentamientos masivos en mapas expansivos sin perder fluidez. Las temporadas y actualizaciones mantienen la experiencia fresca con nuevos modos, armas y ubicaciones. La integración con otros títulos de la saga ofrece un ecosistema compartido que potencia su contenido. Con una calificación de 4.8, Warzone es uno de los pilares del battle royale moderno, tanto por su accesibilidad como por su profundidad."
+
   },
   {
     "titulo": "Death Stranding",
@@ -147,7 +175,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=t6baMXP10aM",
     "rating": 4.9,
     "fechaLanzamiento": "2019-11-08T00:00:00.000Z",
-    "fechaSubida": "2019-11-08T02:20:00.000Z"
+    "fechaSubida": "2019-11-08T02:20:00.000Z",
+    "reviewJuego": "Death Stranding es una experiencia única, arriesgada y profundamente autoral, obra de Hideo Kojima. Este juego plantea una reflexión sobre la conexión humana en un mundo aislado, a través de una jugabilidad centrada en la entrega de paquetes y la reconstrucción del tejido social. Su ritmo pausado, combinado con mecánicas de simulación y exploración, rompe con los moldes convencionales del género. La dirección artística y el diseño de escenarios transmiten una sensación constante de soledad, esperanza y desolación. La narrativa, enigmática y cargada de simbolismo, se complementa con un elenco actoral de alto nivel y una banda sonora emocionalmente poderosa. Death Stranding también innova en su multijugador asíncrono, donde los jugadores cooperan sin interactuar directamente. Es una experiencia contemplativa que no será para todos, pero que ofrece una propuesta narrativa y mecánica sin precedentes. Con un rating de 4.9, se posiciona como una de las obras más originales y divisivas de los últimos años."
+
   },
   {
     "titulo": "Death Stranding 2: On the Beach",
@@ -157,7 +187,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=eT_A2gPhTIw",
     "rating": 4.7,
     "fechaLanzamiento": "2025-06-26T00:00:00.000Z",
-    "fechaSubida": "2025-06-26T01:37:00.000Z"
+    "fechaSubida": "2025-06-26T01:37:00.000Z",
+    "reviewJuego": "Death Stranding 2: On the Beach es una continuación audaz del universo filosófico y provocador que propuso Hideo Kojima en su primera entrega. Esta secuela amplía los conceptos de aislamiento, conexión y cooperación humana desde una nueva perspectiva geográfica y emocional. Ambientado en una Australia devastada, el juego explora temas como el trauma colectivo, la fe y la reconstrucción social. La jugabilidad mantiene su esencia, pero introduce nuevas mecánicas, enemigos y formas de interacción con el entorno. Su apartado gráfico alcanza niveles de realismo y expresión sorprendentes, mientras que la banda sonora refuerza cada escena con un tono melancólico e inspirador. La historia, densa y enigmática, exige atención y recompensa con momentos de fuerte impacto emocional. Kojima continúa desafiando las convenciones del medio, y lo hace con estilo y convicción. Con un rating de 4.7, es una obra que no busca complacer a todos, pero que logra dejar una huella profunda en quienes se sumergen en su experiencia."
+
 },
  {
     "titulo": "League of Legends",
@@ -167,7 +199,9 @@
     "trailerUrl": "https://www.youtube.com/watch?v=I76wvt0aEE4&ab_channel=LeagueofLegends",
     "rating": 4.5,
     "fechaLanzamiento": "2009-10-27T00:00:00.000Z",
-    "fechaSubida": "2009-10-27T02:13:00.000Z"
+    "fechaSubida": "2009-10-27T02:13:00.000Z",
+    "reviewJuego": "League of Legends es el pilar fundamental del género MOBA moderno, y desde su lanzamiento en 2009 ha redefinido la forma en que se vive el multijugador competitivo. Con una base de más de 150 campeones, constantes actualizaciones y una escena de eSports global, el juego de Riot Games ha sabido mantenerse vigente durante más de una década. Su ritmo ágil, profundidad táctica y sistema de roles hacen que cada partida sea única. El juego ha evolucionado visual y mecánicamente con cada temporada, introduciendo nuevas mecánicas y ajustes que enriquecen la experiencia. Además, su universo expandido a través de cinemáticas, música y series animadas ha elevado su propuesta narrativa. Aunque su curva de aprendizaje puede ser intimidante, su diseño por objetivos, estrategia de equipo y posibilidades competitivas lo convierten en uno de los títulos más adictivos del mercado. Con un rating de 4.5, League of Legends es más que un juego: es un fenómeno cultural que sigue marcando tendencia."
+
  },
  {
   "titulo": "EA Sports FC 25",
@@ -177,7 +211,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=pBM2xyco_Kg&vl=en",
   "rating": 4.5,
   "fechaLanzamiento": "2024-09-27T00:00:00.000Z",
-  "fechaSubida": "2024-09-27T01:52:00.000Z"
+  "fechaSubida": "2024-09-27T01:52:00.000Z",
+  "reviewJuego": "EA Sports FC 25 representa una nueva era para la saga futbolística más popular del mundo tras su separación de la licencia FIFA. Este año, la entrega se enfoca en pulir la experiencia dentro del campo con mejoras sustanciales en inteligencia artificial, física del balón y posicionamiento táctico. Los nuevos modos como Rush aportan frescura a una fórmula clásica, ideal tanto para el jugador ocasional como el competitivo. Los gráficos alcanzan un nivel de detalle impresionante, con animaciones realistas y estadios vivos. El modo Carrera ofrece decisiones más estratégicas y una narrativa más dinámica. Ultimate Team sigue siendo el corazón del juego, con mejoras en la química y recompensas. EA Sports FC 25 también destaca por su compromiso con el fútbol femenino, integrando ligas y torneos con profundidad. Con un rating de 4.5, esta entrega es una evolución natural y sólida, que busca cimentar una identidad propia sin perder la esencia de lo que la hizo líder durante décadas."
+
 },
 {
   "titulo": "Marvel Rivals",
@@ -187,7 +223,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=-b0veB7q9P4&ab_channel=MarvelEntertainment",
   "rating": 4.6,
   "fechaLanzamiento": "2024-12-06T00:00:00.000Z",
-  "fechaSubida": "2024-12-06T01:45:00.000Z"
+  "fechaSubida": "2024-12-06T01:45:00.000Z",
+  "reviewJuego": "Marvel Rivals llega como una propuesta fresca y emocionante dentro del género de shooters de héroes. Con una plantilla de personajes icónicos como Iron Man, Spider-Man, Magneto y más, el juego combina la espectacularidad de los poderes con un sistema de combate ágil y estratégico. Las partidas 6 contra 6 permiten la sinergia entre personajes con habilidades complementarias, lo que da lugar a un gameplay dinámico y visualmente espectacular. Cada mapa está inspirado en locaciones reconocidas del universo Marvel, y ofrece mecánicas únicas de interacción. La jugabilidad está pensada para ser accesible, pero profunda, y premia la cooperación y el conocimiento de roles. El sistema de progresión y personalización agrega motivación a largo plazo sin abusar de la monetización. Con un rating de 4.6, Marvel Rivals es un título prometedor que logra capturar la esencia del cómic en una experiencia interactiva intensa y divertida."
+
 },
 {
   "titulo": "Valorant",
@@ -197,7 +235,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=v8SjPWuCPNw&ab_channel=VALORANT-LATAM",
   "rating": 4.5,
   "fechaLanzamiento": "2020-06-02T00:00:00.000Z",
-  "fechaSubida": "2020-06-02T01:30:00.000Z"
+  "fechaSubida": "2020-06-02T01:30:00.000Z",
+  "reviewJuego": "Valorant es la apuesta táctica de Riot Games en el mundo de los shooters, y desde su llegada ha sabido construir una comunidad competitiva leal y creciente. Su propuesta mezcla el rigor estratégico de los FPS clásicos con habilidades de personaje propias de un hero shooter, creando un equilibrio entre precisión, timing y toma de decisiones. Cada agente tiene un kit único que aporta nuevas formas de controlar el mapa, flanquear o proteger áreas clave. El sistema de disparo es preciso y exigente, lo que eleva el nivel de habilidad requerido. Los mapas están diseñados con simetría táctica y múltiples rutas, ideales para jugadas creativas. Además, el soporte constante por parte de Riot en términos de actualizaciones, servidores estables y un sistema antitrampas robusto refuerzan la integridad competitiva. Con un rating de 4.5, Valorant es uno de los shooters más pulidos y estratégicos de la actualidad, con una escena eSports vibrante y en expansión."
+
 },
 {
   "titulo": "Rust",
@@ -207,7 +247,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=LGcECozNXEw&ab_channel=Facepunch",
   "rating": 4.3,
   "fechaLanzamiento": "2018-02-08T00:00:00.000Z",
-  "fechaSubida": "2018-02-08T01:55:00.000Z"
+  "fechaSubida": "2018-02-08T01:55:00.000Z",
+  "reviewJuego": "Rust es una experiencia de supervivencia cruda, despiadada y altamente adictiva. En un mundo abierto donde todo puede matarte —el entorno, el hambre, los animales o incluso otros jugadores—, el título de Facepunch Studios obliga a tomar decisiones difíciles constantemente. Su mecánica principal se basa en la recolección de recursos, construcción de bases, y la defensa ante ataques imprevisibles. La tensión constante entre supervivencia y expansión es su motor, y lo convierte en una de las experiencias más intensas del género. La progresión no depende solo del farmeo, sino de la astucia y el trabajo en equipo. El apartado visual es sobrio, pero efectivo, con un diseño ambiental que transmite hostilidad. La comunidad puede ser agresiva, pero también se forman alianzas genuinas y eventos orgánicos memorables. Con un rating de 4.3, Rust es un juego que no perdona errores, pero que ofrece una de las experiencias emergentes más intensas y realistas del mercado."
+
 },
 {
   "titulo": "Dune: Awakening",
@@ -217,7 +259,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=ztdVjiRpYfo&ab_channel=Funcom",
   "rating": 4.0,
   "fechaLanzamiento": "2024-01-26T00:00:00.000Z",
-  "fechaSubida": "2024-01-26T02:05:00.000Z"
+  "fechaSubida": "2024-01-26T02:05:00.000Z",
+  "reviewJuego": "Dune: Awakening es una inmersión ambiciosa en el legendario universo creado por Frank Herbert, traída al mundo del MMO sandbox. El juego propone una combinación desafiante de supervivencia, política y combate en el desierto de Arrakis. Su diseño enfatiza la escasez de recursos, la gestión del agua y la lucha por el control de la especia, elementos esenciales del lore. La exploración en mundo abierto es clave, y los peligros del entorno —como las tormentas de arena o los gusanos gigantes— se sienten reales y amenazantes. El sistema de facciones y alianzas añade un componente social y estratégico que promete profundidad. Aunque aún necesita tiempo para afinar algunos aspectos técnicos y de balance, su ambición es clara y su ambientación, impresionante. Con un rating de 4.0, Dune: Awakening es un título con mucho potencial, que atraerá tanto a fans del universo como a jugadores de MMO en busca de nuevas experiencias."
+
 },
 {
   "titulo": "NBA 2K25",
@@ -227,7 +271,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=qx0A921z8mA&ab_channel=NBA2K",
   "rating": 4.2,
   "fechaLanzamiento": "2024-09-06T00:00:00.000Z",
-  "fechaSubida": "2024-09-06T01:40:00.000Z"
+  "fechaSubida": "2024-09-06T01:40:00.000Z",
+  "reviewJuego": "NBA 2K25 continúa la tradición de excelencia visual y jugabilidad detallada que ha caracterizado a la saga durante años. Con mejoras notables en la inteligencia artificial, físicas más realistas y animaciones refinadas, cada partido se siente más auténtico. Los modos de juego clásicos como MyCareer, MyTeam y MyLeague regresan con novedades que enriquecen la experiencia del jugador. El Modo Carrera en particular destaca por su narrativa más personalizada y decisiones con impacto en la trayectoria del jugador. MyTeam mantiene su enfoque coleccionista, pero con mejor control sobre la progresión. Gráficamente, es uno de los simuladores deportivos más impactantes del mercado. No obstante, la monetización sigue siendo un punto crítico para parte de la comunidad. Aún así, con un rating de 4.2, NBA 2K25 se posiciona como una entrega sólida y completa, ideal para fans del básquet que buscan tanto realismo como profundidad."
+
 },
 {
   "titulo": "Black Myth: Wukong",
@@ -237,7 +283,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=pnSsgRJmsCc&ab_channel=PlayStation",
   "rating": 4.6,
   "fechaLanzamiento": "2024-08-20T00:00:00.000Z",
-  "fechaSubida": "2024-08-20T01:23:00.000Z"
+  "fechaSubida": "2024-08-20T01:23:00.000Z",
+  "reviewJuego": "Black Myth: Wukong es una de las propuestas más ambiciosas y visualmente impactantes del panorama actual de los RPG de acción. Basado en la mitología china, el juego adapta el clásico viaje de Sun Wukong —el Rey Mono— con un estilo cinematográfico que impresiona desde su primer tráiler. Su sistema de combate fluido y desafiante bebe de juegos como Sekiro y Dark Souls, pero incorpora transformaciones, hechizos y habilidades mágicas que le dan identidad propia. La narrativa se apoya en textos antiguos y leyendas, dándole una profundidad cultural poco vista en el género. El apartado gráfico está a la altura de producciones triple A, con iluminación, animaciones y diseño artístico de altísimo nivel. Cada enemigo y jefe tiene patrones únicos que exigen concentración y estrategia. Con un rating de 4.6, Black Myth: Wukong promete ser no solo una carta de amor al folclore chino, sino también un referente global en los juegos de acción y aventura."
+
 },
 {
   "titulo": "Assassin's Creed Shadows",
@@ -247,7 +295,9 @@
   "trailerUrl": "https://www.youtube.com/watch?v=vovkzbtYBC8&ab_channel=Ubisoft",
   "rating": 4.4,
   "fechaLanzamiento": "2024-11-15T00:00:00.000Z",
-  "fechaSubida": "2024-11-15T01:58:00.000Z"
+  "fechaSubida": "2024-11-15T01:58:00.000Z",
+  "reviewJuego": "Assassin's Creed Shadows lleva finalmente a la franquicia al Japón feudal, uno de los escenarios más pedidos por la comunidad. Esta nueva entrega combina la estructura de mundo abierto con elementos de sigilo, parkour y combate más refinados. Alternando entre dos protagonistas —un samurái y una shinobi—, el juego ofrece estilos de juego distintos y entrelazados, lo que da lugar a una narrativa más compleja. El sistema de estaciones afecta el comportamiento de los NPC, rutas de patrullaje y acceso a ciertas zonas, aportando frescura y estrategia. Visualmente, Japón se presenta con un nivel de detalle impresionante, desde aldeas rurales hasta castillos fortificados. La jugabilidad se siente más calculada y menos arcade que en anteriores entregas. Con un rating de 4.4, Assassin's Creed Shadows marca un regreso a las raíces del sigilo, sin perder la escala épica que caracteriza a la saga."
+
 }
 
 
