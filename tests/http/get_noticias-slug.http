@@ -1,0 +1,1 @@
+GET http://localhost:5000/noticias/slug/gta-6-conecta-con-el-universo-de-gta-5 HTTP/1.1

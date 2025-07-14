@@ -76,17 +76,13 @@ const NoticiasController = () => {
         }
     })
 
-    // GET /noticias?id=123
-    router.get("/", async (req: Request, res: Response) => {
-        const id = parseInt(req.query.id as string);
-
-        if (isNaN(id)) {
-            return res.status(400).json({ error: "ID inválido" });
-        }
+    // GET /noticias/slug/:slug
+    router.get("/slug/:slug", async (req: Request, res: Response) => {
+        const { slug } = req.params;
 
         try {
             const noticia = await prisma.noticia.findUnique({
-                where: { id },
+                where: { slug },
                 select: {
                     id: true,
                     titulo: true,
@@ -115,18 +111,18 @@ const NoticiasController = () => {
                 return res.status(404).json({ error: "Noticia no encontrada" });
             }
 
-            // 🔄 Opcional: transformar `categorias` para que sea un array simple
-            const categoriasPlanas = noticia.categorias.map(c => c.catNoticia);
+            const categoriasPlanas = noticia.categorias.map(c => c.catNoticia.nombre);
 
             res.json({
                 ...noticia,
-                categorias: categoriasPlanas.map(c => c.nombre)
+                categorias: categoriasPlanas
             });
         } catch (error) {
-            console.error("Error al obtener noticia:", error);
+            console.error("Error al obtener noticia por slug:", error);
             res.status(500).json({ error: "Error interno al obtener la noticia" });
         }
     });
+
 
 
 
