@@ -3,7 +3,7 @@ import { PrismaClient, Juego } from "../generated/prisma"
 
 const JuegosController = () => {
     const router = express.Router()
-    
+
     // GET /recientes - Obtener los 10 juegos más recientemente subidos
     router.get("/recientes", async (_req: Request, res: Response) => {
         const prisma = new PrismaClient()
@@ -41,14 +41,14 @@ const JuegosController = () => {
 
     // GET /mas-vendidos
     router.get("/mas-vendidos", async (_req: Request, res: Response) => {
-        const prisma = new PrismaClient()
+        const prisma = new PrismaClient();
 
         try {
             const juegos = await prisma.juego.findMany({
                 take: 12,
                 orderBy: {
                     ventas: {
-                        _count: 'desc'
+                        _count: "desc"
                     }
                 },
                 select: {
@@ -59,9 +59,18 @@ const JuegosController = () => {
                     porcentajeOferta: true,
                     fotos: {
                         take: 1,
-                        orderBy: { id: 'asc' },
+                        orderBy: { id: "asc" },
                         select: {
                             url: true
+                        }
+                    },
+                    plataformas: {
+                        select: {
+                            plataforma: {
+                                select: {
+                                    nombre: true
+                                }
+                            }
                         }
                     },
                     _count: {
@@ -70,26 +79,28 @@ const JuegosController = () => {
                         }
                     }
                 }
-            })
+            });
 
-            const juegosConVentas = juegos.map(({ _count, ...resto }) => ({
+            const juegosConVentas = juegos.map(({ _count, plataformas, ...resto }) => ({
                 ...resto,
-                ventas: _count.ventas
-            }))
+                ventas: _count.ventas,
+                plataformas: plataformas.map(p => p.plataforma.nombre)
+            }));
 
-            res.json(juegosConVentas)
+            res.json(juegosConVentas);
         } catch (error) {
-            console.error("Error al obtener juegos mas vendidos:", error)
-            res.status(500).json({ error: "Error al obtener juegos mas vendidos" })
+            console.error("Error al obtener juegos mas vendidos:", error);
+            res.status(500).json({ error: "Error al obtener juegos mas vendidos" });
         } finally {
-            await prisma.$disconnect()
+            await prisma.$disconnect();
         }
-    })
+    });
+
 
 
     router.get("/explorar", async (_req: Request, res: Response) => {
         const prisma = new PrismaClient()
-    
+
         try {
             const juegos = await prisma.juego.findMany({
                 orderBy: {
@@ -128,13 +139,13 @@ const JuegosController = () => {
                     }
                 }
             })
-    
+
             const juegosFormateados = juegos.map(juego => ({
                 ...juego,
                 categorias: juego.categorias.map(c => c.categoria.nombre),
                 plataformas: juego.plataformas.map(p => p.plataforma.nombre)
             }))
-    
+
             res.json(juegosFormateados)
         } catch (error) {
             console.error("Error al obtener todos los juegos:", error)
@@ -143,8 +154,64 @@ const JuegosController = () => {
             await prisma.$disconnect()
         }
     })
-    
-    
+
+    // GET /juegos/mejor-valorados
+    router.get("/mejor-valorados", async (_req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+
+        try {
+            const juegos = await prisma.juego.findMany({
+                take: 12,
+                where: {
+                    rating: {
+                        not: null
+                    }
+                },
+                orderBy: {
+                    rating: 'desc'
+                },
+                select: {
+                    titulo: true,
+                    rating: true,
+                    reviewJuego: true,
+                    fotos: {
+                        take: 1,
+                        orderBy: { id: 'asc' },
+                        select: {
+                            url: true
+                        }
+                    },
+                    plataformas: {
+                        select: {
+                            plataforma: {
+                                select: {
+                                    nombre: true
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const juegosFormateados = juegos.map(juego => ({
+                nombre: juego.titulo,
+                descripcion: juego.reviewJuego, // Aquí se usa reviewJuego como resumen
+                imagen: juego.fotos[0]?.url ?? "",
+                plataformas: juego.plataformas.map(p => p.plataforma.nombre),
+                score: parseFloat((juego.rating ?? 0).toFixed(2))
+            }));
+
+            res.json(juegosFormateados);
+        } catch (error) {
+            console.error("Error al obtener juegos mejor valorados:", error);
+            res.status(500).json({ error: "Error al obtener juegos mejor valorados" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
+
+
+
 
 
 
