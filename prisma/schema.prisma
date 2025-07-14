@@ -57,6 +57,7 @@ model Juego {
 model Noticia {
   id            Int      @id @default(autoincrement())
   titulo        String   @unique @db.VarChar(120)
+  slug          String   @unique @db.VarChar(120) // Slug único para URL amigable
   tiempoLectura Int
   fechaPub      DateTime
   texto         String
