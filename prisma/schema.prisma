@@ -31,6 +31,7 @@ model Usuario {
   ventas  Venta[] // Relación uno a muchos: un usuario puede tener muchas ventas
   juegos  JuegoXUsuario[] // Relación muchos a muchos con juegos
   resenas Resena[] // Reseñas hechas por el usuario
+  carrito Carrito[]
 }
 
 model Juego {
@@ -52,6 +53,7 @@ model Juego {
   ventas      JuegoXVenta[] // Relación muchos a muchos con ventas
   usuarios    JuegoXUsuario[] // Relación muchos a muchos con usuarios
   resenas     Resena[] // Reseñas recibidas por el juego
+  enCarritos  Carrito[]
 }
 
 model Noticia {
@@ -178,6 +180,15 @@ model Resena {
   puntuacion    Float // Valor de 1.0 a 5.0 (permite medias estrellas)
 
   // Relaciones
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  juego   Juego   @relation(fields: [juegoId], references: [id])
+}
+
+model Carrito {
+  id        Int @id @default(autoincrement())
+  usuarioId Int
+  juegoId   Int
+
   usuario Usuario @relation(fields: [usuarioId], references: [id])
   juego   Juego   @relation(fields: [juegoId], references: [id])
 }

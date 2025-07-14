@@ -373,6 +373,19 @@ async function main() {
   }
 
   console.log('✅ Seed de JuegoXUsuario completado.')
+
+  // ----- Seed de relaciones Carrito -----
+  const carritoPath = path.join(__dirname, '..', 'data', 'carrito.json')
+  const carritoRaw = fs.readFileSync(carritoPath, 'utf-8')
+  const carritoData = JSON.parse(carritoRaw)
+
+  await prisma.carrito.createMany({
+    data: carritoData,
+    skipDuplicates: true
+  })
+
+  console.log('✅ Seed de relaciones Carrito completado.')
+
 }
 
 
