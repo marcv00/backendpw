@@ -98,7 +98,6 @@ const JuegosController = () => {
         }
     });
 
-
     // GET /explorar - Obtener todos los juegos con sus categorias y plataformas
     router.get("/explorar", async (_req: Request, res: Response) => {
         const prisma = new PrismaClient()
@@ -316,7 +315,7 @@ const JuegosController = () => {
     });
 
 
-
+    
 
     return router
 }
