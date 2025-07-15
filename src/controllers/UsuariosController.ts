@@ -130,6 +130,44 @@ const UsuariosController = () => {
         }
     });
 
+    // GET /usuarios/mis-juegos - Obtener los juegos que le pertenecen al usuario
+    router.get("/mis-juegos", verificarToken, async (req: Request, res: Response) => {
+        const usuarioId = (req as any).usuario?.id;
+
+        if (!usuarioId) {
+            return res.status(401).json({ error: "No autorizado" });
+        }
+
+        try {
+            const juegos = await prisma.juegoXUsuario.findMany({
+                where: { usuarioId },
+                select: {
+                    juego: {
+                        select: {
+                            id: true,
+                            titulo: true,
+                            precio: true,
+                            porcentajeOferta: true,
+                            slug: true,
+                            descripcion: true,
+                            fotos: {
+                                take: 1,
+                                orderBy: { id: "asc" },
+                                select: { url: true }
+                            }
+                        }
+                    }
+                }
+            });
+
+            res.json(juegos.map(entry => entry.juego));
+        } catch (error) {
+            console.error("Error al obtener los juegos del usuario:", error);
+            res.status(500).json({ error: "Error al obtener los juegos" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
 
     
     // GET /usuarios/juegos - Obtener todos los juegos disponibles
