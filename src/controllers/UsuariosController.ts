@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express"
-import { PrismaClient, Usuario } from "../generated/prisma"
+import { PrismaClient, Usuario } from "../../prisma/generated/prisma"
 import jwt, {SignOptions} from "jsonwebtoken";
 import { verificarToken } from "../middlewares/authMiddleware";
 

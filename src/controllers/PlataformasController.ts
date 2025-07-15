@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express"
-import { PrismaClient, Plataforma } from "../generated/prisma"
+import { PrismaClient, Plataforma } from "../../prisma/generated/prisma"
 
 const PlataformasController = () => {
     const router = express.Router()

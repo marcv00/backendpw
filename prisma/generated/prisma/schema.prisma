@@ -1,0 +1,195 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["relationJoins"]
+  output          = "./generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Rol {
+  USER
+  ADMIN
+}
+
+model Usuario {
+  id         Int    @id @default(autoincrement())
+  correo     String @unique @db.VarChar(100) // Email único por usuario
+  contrasena String @db.VarChar(100)
+  rol        Rol    @default(USER)
+  nombre     String @db.VarChar(50)
+  apellido   String @db.VarChar(50)
+
+  ventas  Venta[] // Relación uno a muchos: un usuario puede tener muchas ventas
+  juegos  JuegoXUsuario[] // Relación muchos a muchos con juegos
+  resenas Resena[] // Reseñas hechas por el usuario
+  carrito Carrito[]
+}
+
+model Juego {
+  id               Int      @id @default(autoincrement())
+  titulo           String   @unique @db.VarChar(200)
+  descripcion      String
+  precio           Float
+  porcentajeOferta Float? // Campo opcional (puede ser null)
+  trailerUrl       String?  @db.VarChar(200) // URL opcional
+  rating           Float? // Calificación opcional
+  fechaLanzamiento DateTime
+  fechaSubida      DateTime @default(now())
+  slug             String   @unique @db.VarChar(200) // Slug único para URL amigable
+  reviewJuego      String? // Reseña del juego hecha por JuegosXD, opcional
+
+  fotos       Foto[] // Relación uno a muchos: un juego puede tener muchas fotos
+  categorias  CategoriaXJuego[] // Relación muchos a muchos con categorías
+  plataformas PlataformaXJuego[] // Relación muchos a muchos con plataformas
+  claves      Clave[] // Relación uno a muchos: un juego tiene muchas claves
+  ventas      JuegoXVenta[] // Relación muchos a muchos con ventas
+  usuarios    JuegoXUsuario[] // Relación muchos a muchos con usuarios
+  resenas     Resena[] // Reseñas recibidas por el juego
+  enCarritos  Carrito[]
+}
+
+model Noticia {
+  id            Int      @id @default(autoincrement())
+  titulo        String   @unique @db.VarChar(120)
+  slug          String   @unique @db.VarChar(120) // Slug único para URL amigable
+  tiempoLectura Int
+  fechaPub      DateTime
+  texto         String
+  resumen       String   @db.VarChar(300)
+
+  fotoId Int  @unique // Relación uno a uno: una noticia tiene una sola foto
+  foto   Foto @relation(fields: [fotoId], references: [id])
+
+  categorias CatNoticiaXNoticia[] // Relación muchos a muchos con categorías de noticia
+}
+
+model Foto {
+  id  Int    @id @default(autoincrement())
+  url String @db.VarChar(300)
+
+  juegoId Int? // Relación opcional a Juego
+  juego   Juego? @relation(fields: [juegoId], references: [id])
+
+  noticia Noticia? // Relación opcional a Noticia (usada en relación 1:1 desde Noticia)
+}
+
+model Categoria {
+  id     Int    @id @default(autoincrement())
+  nombre String @unique @db.VarChar(50)
+
+  juegos CategoriaXJuego[] // Relación muchos a muchos con juegos
+}
+
+model Plataforma {
+  id     Int    @id @default(autoincrement())
+  nombre String @unique @db.VarChar(50)
+  color  String @db.VarChar(20) // Color para la plataforma (puede ser un código hexadecimal)
+
+  juegos PlataformaXJuego[] // Relación muchos a muchos con juegos
+}
+
+model Venta {
+  id         Int      @id @default(autoincrement())
+  total      Float
+  fechaVenta DateTime @default(now())
+  usuarioId  Int
+  usuario    Usuario  @relation(fields: [usuarioId], references: [id]) // Relación muchos a uno: muchas ventas por usuario
+
+  juegos JuegoXVenta[] // Relación muchos a muchos con juegos
+  claves Clave[] // Relación uno a muchos: una venta contiene muchas claves
+}
+
+model JuegoXVenta {
+  id      Int @id @default(autoincrement())
+  juegoId Int
+  ventaId Int
+
+  juego Juego @relation(fields: [juegoId], references: [id])
+  venta Venta @relation(fields: [ventaId], references: [id])
+}
+
+model JuegoXUsuario {
+  id        Int @id @default(autoincrement())
+  juegoId   Int
+  usuarioId Int
+
+  juego   Juego   @relation(fields: [juegoId], references: [id])
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+}
+
+model Clave {
+  id    Int     @id @default(autoincrement())
+  texto String  @unique @db.VarChar(40) // Clave única para cada clave de juego
+  usada Boolean @default(false)
+
+  juegoId Int
+  ventaId Int
+
+  juego Juego @relation(fields: [juegoId], references: [id]) // Clave pertenece a un juego
+  venta Venta @relation(fields: [ventaId], references: [id]) // Clave se entrega en una venta
+}
+
+model CategoriaXJuego {
+  id          Int @id @default(autoincrement())
+  juegoId     Int
+  categoriaId Int
+
+  juego     Juego     @relation(fields: [juegoId], references: [id])
+  categoria Categoria @relation(fields: [categoriaId], references: [id])
+}
+
+model PlataformaXJuego {
+  id           Int @id @default(autoincrement())
+  juegoId      Int
+  plataformaId Int
+
+  juego      Juego      @relation(fields: [juegoId], references: [id])
+  plataforma Plataforma @relation(fields: [plataformaId], references: [id])
+}
+
+model CatNoticia {
+  id     Int    @id @default(autoincrement())
+  nombre String @unique @db.VarChar(50)
+
+  noticias CatNoticiaXNoticia[] // Relación muchos a muchos con noticias
+}
+
+model CatNoticiaXNoticia {
+  id           Int @id @default(autoincrement())
+  noticiaId    Int
+  catNoticiaId Int
+
+  noticia    Noticia    @relation(fields: [noticiaId], references: [id])
+  catNoticia CatNoticia @relation(fields: [catNoticiaId], references: [id])
+}
+
+model Resena {
+  id            Int      @id @default(autoincrement())
+  usuarioId     Int // FK al usuario que hizo la reseña
+  juegoId       Int // FK al juego al que pertenece la reseña
+  fechaCreacion DateTime @default(now()) // Fecha de creación de la reseña
+  texto         String   @db.VarChar(1000) // Contenido de la reseña
+  puntuacion    Float // Valor de 1.0 a 5.0 (permite medias estrellas)
+
+  // Relaciones
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  juego   Juego   @relation(fields: [juegoId], references: [id])
+}
+
+model Carrito {
+  id        Int @id @default(autoincrement())
+  usuarioId Int
+  juegoId   Int
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  juego   Juego   @relation(fields: [juegoId], references: [id])
+}

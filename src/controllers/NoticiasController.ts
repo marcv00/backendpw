@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express"
-import { PrismaClient, Noticia } from "../generated/prisma"
+import { PrismaClient, Noticia } from "../../prisma/generated/prisma"
 
 const NoticiasController = () => {
     const router = express.Router()
