@@ -319,11 +319,13 @@ const JuegosController = () => {
         const prisma = new PrismaClient();
         try {
             const juegos = await prisma.juego.findMany({
-                orderBy: { fechaLanzamiento: "desc" },
+                orderBy: { fechaSubida: "desc" },
                 select: {
                     id: true,
                     titulo: true,
                     precio: true,
+                    descripcion: true,
+                    trailerUrl  : true,
                     porcentajeOferta: true,
                     fechaLanzamiento: true,
                     categorias: {
@@ -340,7 +342,9 @@ const JuegosController = () => {
             const juegosFormateados = juegos.map(j => ({
                 id: j.id,
                 title: j.titulo,
+                description: j.descripcion,
                 price: j.precio,
+                urlTrailer: j.trailerUrl,
                 discount: j.porcentajeOferta ?? 0,
                 releaseDate: j.fechaLanzamiento.toISOString().split("T")[0],
                 category: j.categorias[0]?.categoria.nombre ?? "Sin categoría"
@@ -358,7 +362,7 @@ const JuegosController = () => {
     // POST /juegos/admin - Crear nuevo juego
     router.post("/admin", async (req: Request, res: Response) => {
         const prisma = new PrismaClient();
-        const { title, price, releaseDate, discount, category } = req.body;
+        const { title, price, releaseDate, discount, category, urlTrailer } = req.body;
 
         try {
             const nuevoJuego = await prisma.juego.create({
@@ -366,6 +370,7 @@ const JuegosController = () => {
                     titulo: title,
                     precio: price,
                     porcentajeOferta: discount ?? null,
+                    trailerUrl: urlTrailer ?? null,
                     fechaLanzamiento: new Date(releaseDate),
                     slug: title.toLowerCase().replace(/\s+/g, "-"),
                     descripcion: "Descripción pendiente",
