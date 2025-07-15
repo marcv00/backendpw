@@ -1,4 +1,4 @@
-import { PrismaClient } from './generated/prisma';
+import { PrismaClient } from "../prisma/generated/prisma";
 import fs from 'fs';
 import path from 'path';
 
