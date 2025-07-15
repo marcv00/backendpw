@@ -258,7 +258,7 @@ const JuegosController = () => {
         }
     });
 
-  
+
     // GET /slug/:slug - Obtener detalle de un juego por su slug
     router.get("/slug/:slug", async (req: Request, res: Response) => {
         const prisma = new PrismaClient();
@@ -314,8 +314,157 @@ const JuegosController = () => {
         }
     });
 
+    // GET /juegos/admin - Obtener todos los juegos (Admin)
+    router.get("/admin", async (_req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+        try {
+            const juegos = await prisma.juego.findMany({
+                orderBy: { fechaLanzamiento: "desc" },
+                select: {
+                    id: true,
+                    titulo: true,
+                    precio: true,
+                    porcentajeOferta: true,
+                    fechaLanzamiento: true,
+                    categorias: {
+                        take: 1, // Solo una categoría principal (puedes cambiar esto)
+                        select: {
+                            categoria: {
+                                select: { nombre: true }
+                            }
+                        }
+                    }
+                }
+            });
 
-    
+            const juegosFormateados = juegos.map(j => ({
+                id: j.id,
+                title: j.titulo,
+                price: j.precio,
+                discount: j.porcentajeOferta ?? 0,
+                releaseDate: j.fechaLanzamiento.toISOString().split("T")[0],
+                category: j.categorias[0]?.categoria.nombre ?? "Sin categoría"
+            }));
+
+            res.json(juegosFormateados);
+        } catch (error) {
+            console.error("Error al obtener juegos admin:", error);
+            res.status(500).json({ error: "Error al obtener juegos admin" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
+
+    // POST /juegos/admin - Crear nuevo juego
+    router.post("/admin", async (req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+        const { title, price, releaseDate, discount, category } = req.body;
+
+        try {
+            const nuevoJuego = await prisma.juego.create({
+                data: {
+                    titulo: title,
+                    precio: price,
+                    porcentajeOferta: discount ?? null,
+                    fechaLanzamiento: new Date(releaseDate),
+                    slug: title.toLowerCase().replace(/\s+/g, "-"),
+                    descripcion: "Descripción pendiente",
+                }
+            });
+
+            // Asignar categoría (si se provee)
+            if (category) {
+                const cat = await prisma.categoria.findUnique({ where: { nombre: category } });
+                if (cat) {
+                    await prisma.categoriaXJuego.create({
+                        data: {
+                            juegoId: nuevoJuego.id,
+                            categoriaId: cat.id
+                        }
+                    });
+                }
+            }
+
+            res.status(201).json(nuevoJuego);
+        } catch (error) {
+            console.error("Error al crear juego:", error);
+            res.status(500).json({ error: "Error al crear juego" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
+
+    // PUT /juegos/admin/:id - Actualizar juego
+    // PUT /juegos/admin/:id - Actualizar juego
+    router.put("/admin/:id", async (req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+        const { id } = req.params;
+        const { title, price, releaseDate, discount, category, description } = req.body;
+
+        try {
+            const juegoActualizado = await prisma.juego.update({
+                where: { id: Number(id) },
+                data: {
+                    titulo: title,
+                    descripcion: description, // ✅ Modificamos la descripción
+                    precio: price,
+                    porcentajeOferta: discount ?? null,
+                    fechaLanzamiento: new Date(releaseDate),
+                    slug: title.toLowerCase().replace(/\s+/g, "-"),
+                }
+            });
+
+            if (category) {
+                const cat = await prisma.categoria.findUnique({ where: { nombre: category } });
+                if (cat) {
+                    await prisma.categoriaXJuego.deleteMany({ where: { juegoId: Number(id) } });
+                    await prisma.categoriaXJuego.create({
+                        data: {
+                            juegoId: Number(id),
+                            categoriaId: cat.id
+                        }
+                    });
+                }
+            }
+
+            res.json(juegoActualizado);
+        } catch (error) {
+            console.error("Error al actualizar juego:", error);
+            res.status(500).json({ error: "Error al actualizar juego" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
+
+    // DELETE /juegos/admin/:id
+    router.delete("/admin/:id", async (req: Request, res: Response) => {
+        const prisma = new PrismaClient();
+        const { id } = req.params;
+        const juegoId = Number(id);
+
+        try {
+            // Borrar relaciones hijas
+            await prisma.categoriaXJuego.deleteMany({ where: { juegoId } });
+            await prisma.plataformaXJuego.deleteMany({ where: { juegoId } });
+            await prisma.juegoXVenta.deleteMany({ where: { juegoId } });
+            await prisma.juegoXUsuario.deleteMany({ where: { juegoId } });
+            await prisma.clave.deleteMany({ where: { juegoId } });
+            await prisma.resena.deleteMany({ where: { juegoId } });
+            await prisma.carrito.deleteMany({ where: { juegoId } });
+            await prisma.foto.deleteMany({ where: { juegoId } });
+
+            // Ahora sí, borrar el juego
+            await prisma.juego.delete({ where: { id: juegoId } });
+
+            res.status(204).send();
+        } catch (error) {
+            console.error("Error al eliminar juego:", error);
+            res.status(500).json({ error: "Error al eliminar juego" });
+        } finally {
+            await prisma.$disconnect();
+        }
+    });
+
 
     return router
 }
